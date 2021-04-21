@@ -1,7 +1,7 @@
 {
   "data": null,
   "links": {
-    "self": "https://${BASE_DOMAIN}",
-    "1.0": "https://${BASE_DOMAIN}/1.0"
+    "self": "${URL_BASE}",
+    "1.0": "${URL_BASE}/1.0"
   }
 }

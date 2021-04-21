@@ -8,7 +8,8 @@ pipeline {
         
         SERVER_PORT = "1012"
 
-        BASE_DOMAIN = "destinationdata.alpinebits.opendatahub.testingmachine.eu"
+        URL_BASE = "https://destinationdata.alpinebits.opendatahub.testingmachine.eu"
+        URL_VERSION_1_0 = "https://1-0.destinationdata.alpinebits.opendatahub.testingmachine.eu"
     }
 
     stages {
@@ -23,7 +24,7 @@ pipeline {
 
                     echo 'SERVER_PORT=${SERVER_PORT}' >> .env
 
-                    echo 'BASE_DOMAIN=${BASE_DOMAIN}' >> .env
+                    echo 'URL_VERSION_1_0=${URL_VERSION_1_0}' >> .env
                 """
             }
         }
