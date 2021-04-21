@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  app:
+    container_name: alpinebits-destination-data-proxy
+    build:
+      context: ./
+      dockerfile: infrastructure/docker/Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "${SERVER_PORT}:80"
