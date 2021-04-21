@@ -6,4 +6,4 @@ services:
     restart: unless-stopped
     env_file: .env
     ports:
-      - "${SERVER_PORT}:${REF_SERVER_PORT}"
+      - "${SERVER_PORT}:80"
