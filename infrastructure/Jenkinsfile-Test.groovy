@@ -9,7 +9,7 @@ pipeline {
         SERVER_PORT = "1012"
 
         URL_BASE = "https://destinationdata.alpinebits.opendatahub.testingmachine.eu"
-        URL_VERSION_1_0 = "https://1-0.destinationdata.alpinebits.opendatahub.testingmachine.eu"
+        URL_VERSION_1_0 = "http:/docker02.testingmachine.eu:1003"
     }
 
     stages {
