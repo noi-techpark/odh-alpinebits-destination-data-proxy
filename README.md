@@ -1,4 +1,4 @@
-# AlpineBits DestinationData Porxy
+# AlpineBits DestinationData Proxy
 
 This is a reference implementation for an AlpineBits DestinationData server. The server exposes data from the OpenDataHub API in accordance to the AlpineBits format.
 
