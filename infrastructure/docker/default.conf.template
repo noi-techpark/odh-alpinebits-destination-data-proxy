@@ -9,7 +9,13 @@ server {
     location = /favicon.ico { log_not_found off; access_log off; }
     location = /robots.txt  { log_not_found off; access_log off; }
 
+    types {
+        "application/vnd.api+json; charset=utf-8" json;
+    }
+
     location / {
+        default_type "application/vnd.api+json; charset=utf-8";
+
         if ($request_method !~ ^(GET|HEAD)$ ) {
             return 405;
         }
