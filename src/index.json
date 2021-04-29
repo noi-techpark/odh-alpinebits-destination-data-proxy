@@ -2,7 +2,7 @@
   "data": null,
   "links": {
     "self": "${URL_BASE}",
-    "1.0": "${URL_BASE}/1.0"
+    "1.0": "${URL_BASE}/1.0",
     "2021-04": "${URL_BASE}/2021-04"
   }
 }
