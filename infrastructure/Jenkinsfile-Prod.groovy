@@ -10,6 +10,7 @@ pipeline {
 
         URL_BASE = "https://destinationdata.alpinebits.opendatahub.bz.it"
         URL_VERSION_1_0 = "http://docker04.opendatahub.bz.it:1003"
+        URL_VERSION_2021_04 = "http://docker04.opendatahub.bz.it:1006"
     }
 
     stages {
@@ -26,6 +27,7 @@ pipeline {
 
                     echo 'URL_BASE=${URL_BASE}' >> .env
                     echo 'URL_VERSION_1_0=${URL_VERSION_1_0}' >> .env
+                    echo 'URL_VERSION_2021_04=${URL_VERSION_2021_04}' >> .env
                 """
             }
         }
