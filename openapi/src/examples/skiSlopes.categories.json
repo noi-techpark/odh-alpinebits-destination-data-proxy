@@ -1,0 +1,41 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/skiSlopes/1/categories"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "categories",
+      "id": "example:category",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "abstract": null,
+        "description": null,
+        "name": {
+          "eng": "Example Category"
+        },
+        "namespace": "example",
+        "resourceTypes": [ "skiSlopes" ],
+        "shortName": null,
+        "url": null
+      },
+      "relationships": {
+        "children": null,
+        "multimediaDescriptions": null,
+        "parents": null
+      },
+      "links": {
+        "self": "https://example.com/2021-04/categories/example:category",
+        "resources": {
+          "skiSlopes": "https://example.com/2021-04/skiSlopes?filter[categories][any]=example:category"
+        }
+      }
+    }
+  ]
+}

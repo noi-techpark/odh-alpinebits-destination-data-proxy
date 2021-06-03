@@ -1,0 +1,64 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/mediaObjects/1"
+  },
+  "included": null,
+  "data": {
+    "type": "mediaObjects",
+    "id": "1",
+    "meta": {
+      "dataProvider": "https://example.com",
+      "lastUpdate": "2020-04-01T08:00:00+02:00"
+    },
+    "attributes": {
+      "abstract": {
+        "eng": "My first image sent as an example for the API."
+      },
+      "contentType": "image/png",
+      "description": {
+        "eng": "My first image sent as an example for the API."
+      },
+      "duration": null,
+      "height": 300,
+      "license": "FreeImage",
+      "name": {
+        "ita": "La mia immagine",
+        "deu": "Mein bild",
+        "eng": "My image"
+      },
+      "shortName": {
+        "eng": "My image"
+      },
+      "url": "https://example.com/image.png",
+      "width": 400
+    },
+    "relationships": {
+      "categories": {
+        "data": [
+          {
+            "type": "categories",
+            "id": "example/panoramic-photo"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/mediaObjects/1/categories"
+        }
+      },
+      "copyrightOwner": {
+        "data": {
+          "type": "agents",
+          "id": "0"
+        },
+        "links": {
+          "related": "https://example.com/2021-04/mediaObjects/1/copyrgihtOwner/"
+        }
+      }
+    },
+    "links": {
+      "self": "https://example.com/2021-04/mediaObjects/1"
+    }
+  }
+}

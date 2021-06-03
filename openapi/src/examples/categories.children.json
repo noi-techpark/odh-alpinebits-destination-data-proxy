@@ -1,0 +1,41 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/categories/example:category/children"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "categories",
+      "id": "example:subcategory",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "abstract": null,
+        "description": null,
+        "name": {
+          "eng": "Example Child Category"
+        },
+        "namespace": "example",
+        "resourceTypes": [ "events" ],
+        "shortName": null,
+        "url": null
+      },
+      "relationships": {
+        "children": null,
+        "multimediaDescriptions": null,
+        "parents": null
+      },
+      "links": {
+        "self": "https://example.com/2021-04/categories/example:subcategory",
+        "resources": {
+          "events": "https://example.com/2021-04/events?filter[categories][any]=example:subcategory"
+        }
+      }
+    }
+  ]
+}

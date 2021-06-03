@@ -1,0 +1,91 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "meta": {
+    "count": 10,
+    "pages": 10
+  },
+  "links": {
+      "next": "https://example.com/2021-04/features?page[number]=2",
+      "prev": "https://example.com/2021-04/features?page[number]=1",
+      "first": "https://example.com/2021-04/features?page[number]=1",
+      "last": "https://example.com/2021-04/features?page[number]=10",
+      "self": "https://example.com/2021-04/features"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "features",
+      "id": "example:snowparkRamp",
+      "meta": {
+        "dataProvider": "https://example.com",
+        "lastUpdate": "2021-04-01T08:00:00+02:00"
+      },
+      "attributes": {
+        "abstract": {
+          "ita": "Una rampa di snowpark è una struttura per la pratica di manovre aeree negli sport invernali radicali.",
+          "deu": "Eine Snowpark-Rampe ist eine Struktur zum Üben von Flugmanövern im radikalen Wintersport.",
+          "eng": "A snowpark ramp is a structure for the practice of aerial maneuvers in radical winter sports."
+        },
+        "description": {
+          "ita": "Una rampa da snowpark è una struttura presente negli snowpark progettata per supportare l'esecuzione di manovre aeree negli sport invernali radicali.",
+          "deu": "Eine Snowpark-Rampe ist eine Einrichtung in Snowparks, die dazu dient, die Ausführung von Flugmanövern bei radikalen Wintersportarten zu unterstützen.",
+          "eng": "A snowpark ramp is a feature present in snowparks designed to support the execution of aerial maneuvers in radical winter sports."
+        },
+        "name": {
+          "ita": "Snowpark Ramp",
+          "deu": "Snowpark Rampe",
+          "eng": "Snowpark Ramp"
+        },
+        "namespace": "example",
+        "resourceTypes": [ "snowparks" ],
+        "shortName": {
+          "eng": "Snowpark Ramp"
+        },
+        "url": "https://en.wikipedia.org/wiki/Terrain_park"
+      },
+      "relationships": {
+        "children": {
+          "data": [
+            {
+              "type": "features",
+              "id": "example:snowboardRamp"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/features/example:snowparkRamp/children"
+          }
+        },
+        "multimediaDescriptions": {
+          "data": [
+            {
+              "type": "mediaObjects",
+              "id": "1"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/features/example:snowparkRamp/multimediaDescriptions"
+          }
+        },
+        "parents": {
+          "data": [
+            {
+              "type": "features",
+              "id": "example:radicalSportsRamp"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/features/example:snowparkRamp/parents"
+          }
+        }
+      },
+      "links": {
+        "self": "https://example.com/2021-04/features/example:snowparkRamp",
+        "resources": {
+          "snowparks": "https://example.com/2021-04/snowparks?filter[features][any]=example:snowparkRamp"
+        }
+      }
+    }
+  ]
+}

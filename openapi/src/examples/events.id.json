@@ -1,0 +1,150 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/events/1"
+  },
+  "included": null,
+  "data": {
+    "type": "events",
+    "id": "1",
+    "meta": {
+      "dataProvider": "https://example.com",
+      "lastUpdate": "2020-04-01T08:00:00+02:00"
+    },
+    "attributes": {
+      "name": {
+        "eng": "Südtirol Jazz Festival 2020",
+        "deu": "Südtirol Jazz Festival 2020",
+        "ita": "Südtirol Jazz Festival 2020"
+      },
+      "shortName": {
+        "eng": "Südtirol Jazz Festival 2020"
+      },
+      "description": {
+        "deu": "Beim Südtirol Jazzfestival Alto Adige wagen sich Solisten und Ensembles nicht nur in schwindelerregende musikalische „Höhen“ vor, sondern besteigen, mit ihren Instrumenten im Gepäck, sogar „echte“ Berge und bespielen dabei eine atemberaubende alpine Landschaft. Das Festival selbst beschreitet oft ganz neue Wege: selbstbewusst und sich mitunter über zerklüftete Spalten herantastend, versucht es in neue Klanglandschaften vorzudringen. Mainstream und Konzertsäle sind beim Südtirol Jazzfestival Alto Adige vom Aussterben bedroht...."
+      },
+      "abstract": {
+        "deu": "Das Südtirol Jazzfestival Alto Adige ist ein in Südtirol stattfindendes Musikfestival für Jazz und experimentelle Musik."
+      },
+      "startDate": "2020-06-26T21:00:00+00:00",
+      "endDate": "2020-07-07T23:30:00+00:00",
+      "url": "https://www.suedtiroljazzfestival.com/",
+      "status": "published",
+      "capacity": 1000
+    },
+    "relationships": {
+      "series": {
+        "data": {
+          "type": "eventSeries",
+          "id": "1"
+        },
+        "links": {
+          "related": "https://example.com/2021-04/events/1/eventSeries"
+        }
+      },
+      "publisher": {
+        "data": {
+          "type": "agents",
+          "id": "1"
+        },
+        "links": {
+          "related": "https://example.com/2021-04/events/1/publisher"
+        }
+      },
+      "organizers": {
+        "data": [
+          {
+            "type": "agents",
+            "id": "2"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/events/1/organizers"
+        }
+      },
+      "sponsors": {
+        "data": [
+          {
+            "type": "agents",
+            "id": "3"
+          },
+          {
+            "type": "agents",
+            "id": "4"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/events/1/sponsors"
+        }
+      },
+      "contributors": {
+        "data": [
+          {
+            "type": "agents",
+            "id": "5"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/events/1/contributors"
+        }
+      },
+      "categories": {
+        "data": [
+          {
+            "type": "categories",
+            "id": "schema:MusicEvent"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/events/1/categories"
+        }
+      },
+      "multimediaDescriptions": {
+        "data": [
+          {
+            "type": "mediaObjects",
+            "id": "1"
+          },
+          {
+            "type": "mediaObjects",
+            "id": "2"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/events/1/multimediaDescriptions"
+        }
+      },
+      "venues": {
+        "data": [
+          {
+            "type": "venues",
+            "id": "1"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/events/1/venues"
+        }
+      },
+      "subEvents": {
+        "data": [
+          {
+            "type": "events",
+            "id": "2"
+          },
+          {
+            "type": "events",
+            "id": "3"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/events/1/subEvents"
+        }
+      }
+    },
+    "links": {
+      "self": "https://example.com/2021-04/events/1"
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/mountainAreas/1"
+  },
+  "included": null,
+  "data": {
+    "id": "1",
+    "type": "mountainAreas",
+    "meta": {
+      "dataProvider": "https://example.com",
+      "lastUpdate": "2020-04-01T08:00:00+02:00"
+    },
+    "attributes": {
+      "name": {
+        "ita": "Merano 2000",
+        "deu": "Meran 2000",
+        "eng": "Meran 2000"
+      },
+      "shortName": {
+        "eng": "Meran 2000"
+      },
+      "description": {
+        "deu": "Das Skigebiet Meran 2000 liegt unter dem Berg Ifinger im Burggrafenamt auf einem Hochplateau oberhalb Meran am Tschögglberg in Südtirol. Es hat 45 km Alpin-Pisten und reicht von 1670 bis 2300 m Höhe. Von Meran aus ist das Gebiet direkt über die Ifinger-Seilbahn ab Naif oder durch eine Umlaufseilbahn ab Falzeben erreichbar. Das Skigebiet erstreckt sich hauptsächlich auf dem Gemeindegebiet von Hafling, berührt aber auch zu den Gemeinden Schenna und Sarntal gehörende Flächen."
+      },
+      "abstract": {
+        "deu": "Das Skigebiet Meran 2000 liegt unter dem Berg Ifinger im Burggrafenamt auf einem Hochplateau oberhalb Meran am Tschögglberg in Südtirol. Es hat 45 km Alpin-Pisten und reicht von 1670 bis 2300 m Höhe."
+      },
+      "url": "https://www.meran2000.com",
+      "geometries": [
+        {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                11.310853958129883,
+                46.66958283253642
+              ],
+              [
+                11.304588317871094,
+                46.668817160723044
+              ],
+              [
+                11.301412582397461,
+                46.666696782172096
+              ],
+              [
+                11.305532455444336,
+                46.66457632044435
+              ],
+              [
+                11.31265640258789,
+                46.66646117942096
+              ],
+              [
+                11.314373016357422,
+                46.66869936409677
+              ],
+              [
+                11.310853958129883,
+                46.66958283253642
+              ]
+            ]
+          ]
+        }
+      ],
+      "howToArrive": {
+        "ita": "L'area sciistica ed escursionistica di Merano è situata ai piedi della montagna Picco Ivigna ed è raggiungibile in pochi minuti dalle destinazioni di Merano, Avelengo, Scena e Tirolo. La cima di Merano 2000 è raggiungibile con due impianti di risalita diversi e ha dunque due stazioni a valle, una presso Merano con la Funivia e una ad Avelengo con la Cabinovia Falzeben.",
+        "deu": "Die Sonnenterrasse Merans liegt am Fuße des Ifingers und ist von den Ferienorten Meran, Hafling, Schenna und Dorf Tirol in wenigen Minuten leicht erreichbar. Die Bergstation von Meran 2000 kann man mit zwei verschiedenen Aufstiegsanlagen erreichen: von Meran aus mit der Bergbahn und von Hafling aus mit der Umlaufbahn Falzeben.",
+        "eng": "The skiing and hiking area of Merano 2000 is best located next to the biggest vacation hotspots of South Tyrol and so reachable within few minutes from Merano, Avelengo, Scena and Tirolo. Two lifts can bring you to the mountain station of Merano 2000: the Ropeway in Merano or the Gondola Falzeben in Avelengo."
+      },
+      "openingHours": {
+        "dailySchedules": {
+          "2020-12-25": null
+        },
+        "weeklySchedules": [
+          {
+            "validFrom": "2020-01-01",
+            "validTo": "2020-12-31",
+            "monday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "tuesday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "wednesday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "thursday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "friday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "saturday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "sunday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ]
+          }
+        ]
+      },
+      "area": 36000,
+      "minAltitude": 1200,
+      "maxAltitude": 2000,
+      "totalTrailLength": 4000,
+      "totalParkArea": 20000,
+      "totalParkLength": 1000,
+      "snowCondition": {
+        "primarySurface": "powder",
+        "secondarySurface": "packed-powder",
+        "baseSnow": 50,
+        "baseSnowRange": {
+          "lower": 40,
+          "upper": 60
+        },
+        "latestStorm": 40,
+        "obtainedIn": "2019-12-20",
+        "snowOverNight": 5,
+        "groomed": true,
+        "snowMaking": false
+      }
+    },
+    "relationships": {
+      "areaOwner": {
+        "data": {
+          "type": "agents",
+          "id": "1"
+        },
+        "links": {
+          "related": "https://example.com/2021-04/mountainAreas/1/areaOwner/"
+        }
+      },
+      "connections": {
+        "data": [
+          {
+            "type": "lifts",
+            "id": "1"
+          },
+          {
+            "type": "skiSlopes",
+            "id": "1"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/mountainAreas/1/connections/"
+        }
+      },
+      "categories": {
+        "data": [
+          {
+            "type": "categories",
+            "id": "example/skiarea"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/mountainAreas/1/categories"
+        }
+      },
+      "multimediaDescriptions": {
+        "data": [
+          {
+            "type": "mediaObjects",
+            "id": "1"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/mountainAreas/1/multimediaDescriptions/"
+        }
+      },
+      "lifts": {
+        "data": [
+          {
+            "type": "lifts",
+            "id": "1"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/mountainAreas/1/lifts/"
+        }
+      },
+      "skiSlopes": {
+        "data": [
+          {
+            "type": "skiSlopes",
+            "id": "1"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/mountainAreas/1/skiSlopes/"
+        }
+      },
+      "snowparks": {
+        "data": [
+          {
+            "type": "snowparks",
+            "id": "1"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/mountainAreas/1/snowparks/"
+        }
+      },
+      "subAreas": {
+        "data": [
+          {
+            "type": "mountainAreas",
+            "id": "2"
+          },
+          {
+            "type": "mountainAreas",
+            "id": "3"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/mountainAreas/1/subAreas/"
+        }
+      }
+    },
+    "links": {
+      "self": "https://example.com/2021-04/mountainAreas/1"
+    }
+  }
+}

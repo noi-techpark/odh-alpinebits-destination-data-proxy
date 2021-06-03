@@ -1,0 +1,92 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/venues/1"
+  },
+  "included": null,
+  "data": {
+    "type": "venues",
+    "id": "1",
+    "meta": {
+      "dataProvider": "https://example.com",
+      "lastUpdate": "2020-04-01T08:00:00+02:00"
+    },
+    "attributes": {
+      "abstract": {
+        "eng": "The Auditorium 1 of the Free University of Bozen-Bolzano provides a great space for keynotes, lectures and presentations."
+      },
+      "address": {
+        "street": {
+          "ita": "Piazza Università, 1",
+          "deu": "Universitätsplatz 1"
+        },
+        "city": {
+          "deu": "Bozen"
+        },
+        "region": {
+          "deu": "Trentino-Südtirol"
+        },
+        "country": "IT",
+        "zipcode": "39100",
+        "complement": {
+          "deu": "Hauptgebäude"
+        },
+        "categories": [
+          "example/building"
+        ]
+      },
+      "area": 150,
+      "description": {
+        "eng": "The Auditorium 1 of the Free University of Bozen-Bolzano provides a great space for keynotes, lectures and presentations, being available to host events related academic, provincial and cultural topics."
+      },
+      "geometries": [
+        {
+          "type": "Point",
+          "coordinates": [
+            11.35087251663208,
+            46.49873937419277
+          ]
+        }
+      ],
+      "howToArrive": {
+        "eng": "From the train station, the Free University of Bozen-Bolzano is accessible in a 5 minutes walk into the historical city center."
+      },
+      "name": {
+        "eng": "Auditorium 1 - Free University of Bozen-Bolzano"
+      },
+      "shortName": {
+        "eng": "Auditorium 1"
+      },
+      "url": "https://example.com/auditorium-1"
+    },
+    "relationships": {
+      "categories": {
+        "data": [
+          {
+            "type": "categories",
+            "id": "example:auditorium"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/venues/1/categories"
+        }
+      },
+      "multimediaDescriptions": {
+        "data": [
+          {
+            "type": "mediaObjects",
+            "id": "1"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2021-04/venues/1/multimediaDescriptions"
+        }
+      }
+    },
+    "links": {
+      "self": "https://example.com/2021-04/venues/1"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "meta": {
+    "count": 10,
+    "pages": 10
+  },
+  "links": {
+      "next": "https://example.com/2021-04/categories?page[number]=2",
+      "prev": "https://example.com/2021-04/categories?page[number]=1",
+      "first": "https://example.com/2021-04/categories?page[number]=1",
+      "last": "https://example.com/2021-04/categories?page[number]=10",
+      "self": "https://example.com/2021-04/categories"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "categories",
+      "id": "example:soccerEvent",
+      "meta": {
+        "dataProvider": "https://example.com",
+        "lastUpdate": "2021-04-01T08:00:00+02:00"
+      },
+      "attributes": {
+        "abstract": {
+          "ita": "Un evento sportivo legato al calcio.",
+          "deu": "Ein Sportereignis, das mit Fußball zu tun hat.",
+          "eng": "A sports event related to soccer."
+        },
+        "description": {
+          "ita": "Un evento sportivo legato al calcio, per esempio una partita di calcio o un incontro con i giocatori.",
+          "deu": "Ein Sportereignis mit Bezug zum Fußball, z. B. ein Fußballspiel oder ein Meet-and-Greet mit Spielern.",
+          "eng": "A sports event related to soccer, for example a soccer match or a meet-and-greet with players."
+        },
+        "name": {
+          "ita": "Evento di Calcio",
+          "deu": "Fußball-Event",
+          "eng": "Soccer Event"
+        },
+        "namespace": "example",
+        "resourceTypes": [ "events" ],
+        "shortName": {
+          "eng": "Soccer Event"
+        },
+        "url": "https://en.wikipedia.org/wiki/Association_football"
+      },
+      "relationships": {
+        "children": {
+          "data": [
+            {
+              "type": "categories",
+              "id": "example:sub19SoccerMatch"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/categories/example:soccerEvent/children"
+          }
+        },
+        "multimediaDescriptions": {
+          "data": [
+            {
+              "type": "mediaObjects",
+              "id": "1"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/categories/example:soccerEvent/multimediaDescriptions"
+          }
+        },
+        "parents": {
+          "data": [
+            {
+              "type": "categories",
+              "id": "schema:SportsEvent"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/categories/example:soccerEvent/parents"
+          }
+        }
+      },
+      "links": {
+        "self": "https://example.com/2021-04/categories/example:soccerEvent",
+        "resources": {
+          "events": "https://example.com/2021-04/events?filter[categories][any]=example:soccerEvent"
+        }
+      }
+    }
+  ]
+}

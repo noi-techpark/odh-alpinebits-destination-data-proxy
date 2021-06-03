@@ -1,0 +1,184 @@
+filter:
+  name: filter
+  in: query
+  style: deepObject
+  explode: true
+  allowReserved: true
+  description: Filters resources in the endpoint based on "label-specific" or
+    "simple generic" filters. Label-specific filters have their behavior and
+    syntax defined by the server (e.g., a filter for resources available in
+    desired languages, `filter[lang]=eng,ita,deu`). Simple generic filters
+    combine a field (among the fields in the resources present in `data`) and
+    a logical operand (e.g., filter resources with a last update value greater
+    than a certain date, `filter[lastUpdate][gt]=2021-04-01`). The operands
+    and their behavior is defined by the standard. Filters may refer to nested
+    fields (e.g., `filter[name.eng][exists]=true`). If the server is unable
+    process any filter, it shall respond with `400 Bad Request`.
+  schema:
+    type: object
+    additionalProperties:
+      anyOf:
+        - type: string
+        - type: object
+          additionalProperties:
+            type: string
+    example:
+      lang: eng,ita,deu
+      lastUpdate:
+        gt: '2021-04-01'
+filterActivities:
+  name: filter
+  in: query
+  style: deepObject
+  explode: true
+  allowReserved: true
+  description: >
+    Filters resources in the endpoint based on "label-specific" or
+    "simple generic" filters. The available filters are:
+      - `filter[lang]`: filters resources containing text data in the desired
+      languages (e.g., `filter[lang]=eng,ita,deu`). Receives comma-separated
+      ISO 639-3 languages tags.
+
+      - `filter[lastUpdate][gt]`: filters resources updated after a desired
+      date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601
+      date string.
+      
+      - `filter[lastUpdate][lt]`: filters resources updated before a desired
+      date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601
+      date string.
+
+      - `filter[categories][any]`: filters resources having any of the desired
+      categories (e.g., `filter[categories][any]=example:cat1,example:cat2`).
+      Receives comma-separated category ids.
+
+      - `filter[categories][all]`: filters resources having all of the desired
+      categories (e.g., `filter[categories][all]=example:cat1,example:cat2`).
+      Receives comma-separated category ids.
+
+      - `filter[geometries][near]`: filters resources whose geometries are near
+      a desired GPS point (e.g.,
+      `filter[geometries][near]=11.309245,46.862025,10000`). Receives three
+      comma-separated numbers in the following order: a longitude value, a
+      latitude value, and a proximity radius in meters.
+
+
+    If the server is unable process any filter, it shall respond with `400 Bad
+    Request`.
+  schema:
+    type: object
+    properties:
+      lang:
+        type: string
+      lastUpdate:
+        type: object
+        properties:
+          gt:
+            type: string
+          lt:
+            type: string
+      categories:
+        type: object
+        properties:
+          any:
+            type: string
+          all:
+            type: string
+      geometries:
+        type: object
+        properties:
+          near:
+            type: string
+    example:
+      lang: eng,ita,deu
+      lastUpdate:
+        gt: '2021-04-01'
+      categories:
+        any: 'example:category'
+      geometries:
+        near: 11.309245,46.862025,10000
+filterEvents:
+  name: filter
+  in: query
+  style: deepObject
+  explode: true
+  allowReserved: true
+  description: >
+    Filters resources in the endpoint based on "label-specific" or
+    "simple generic" filters. The available filters are:
+      - `filter[lang]`: filters resources containing text data in the desired
+      languages (e.g., `filter[lang]=eng,ita,deu`). Receives comma-separated
+      ISO 639-3 languages tags.
+
+      - `filter[lastUpdate][gt]`: filters resources updated after a desired
+      date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601
+      date string.
+      
+      - `filter[lastUpdate][lt]`: filters resources updated before a desired
+      date (e.g., `filter[lastUpdate][lt]=2021-04-01`). Receives an ISO 8601
+      date string.
+
+      - `filter[startDate][gt]`: filters events with a start date greater than a
+      desired date (e.g., `filter[startDate][gt]=2021-04-01`). Receives an ISO
+      8601 date string.
+      
+      - `filter[startDate][lt]`: filters events with a start date lower than a
+      desired date (e.g., `filter[startDate][lt]=2021-04-01`). Receives an ISO
+      8601 date string.
+
+      - `filter[endDate][gt]`: filters events with a end date greater than a
+      desired date (e.g., `filter[endDate][gt]=2021-04-01`). Receives an ISO
+      8601 date string.
+      
+      - `filter[endDate][lt]`: filters events with a end date lower than a
+      desired date (e.g., `filter[endDate][lt]=2021-04-01`). Receives an ISO
+      8601 date string.
+
+      - `filter[categories][any]`: filters resources having any of the desired
+      categories (e.g., `filter[categories][any]=example:cat1,example:cat2`).
+      Receives comma-separated category ids.
+
+      - `filter[categories][all]`: filters resources having all of the desired
+      categories (e.g., `filter[categories][all]=example:cat1,example:cat2`).
+      Receives comma-separated category ids.
+
+      - `filter[venues][near]`: filters resources whose venues' geometries are
+      near a desired GPS point (e.g.,
+      `filter[venues][near]=11.309245,46.862025,10000`). Receives three
+      comma-separated numbers in the following order: a longitude value, a
+      latitude value, and a proximity radius in meters.
+
+
+    If the server is unable process any filter, it shall respond with `400 Bad
+    Request`.
+  schema:
+    type: object
+    properties:
+      lang:
+        type: string
+      lastUpdate:
+        type: object
+        properties:
+          gt:
+            type: string
+          lt:
+            type: string
+      categories:
+        type: object
+        properties:
+          any:
+            type: string
+          all:
+            type: string
+      geometries:
+        type: object
+        properties:
+          near:
+            type: string
+    example:
+      lang: eng,ita,deu
+      lastUpdate:
+        gt: '2021-04-01'
+      categories:
+        any: 'example:category'
+      geometries:
+        near: 11.309245,46.862025,10000
