@@ -22,10 +22,6 @@ filter:
         - type: object
           additionalProperties:
             type: string
-    example:
-      lang: eng,ita,deu
-      lastUpdate:
-        gt: '2021-04-01'
 filterActivities:
   name: filter
   in: query
@@ -61,7 +57,10 @@ filterActivities:
       comma-separated numbers in the following order: a longitude value, a
       latitude value, and a proximity radius in meters.
 
-
+    Notice that if you wish to use one of these examples in a request you must
+    represent them as a JSON objects due to the supported serialization of
+    objects in URLs: for label-specific filters, `{ "lang": "eng,ita,deu" }`;
+    and for simple generic filters, `{ "lastUpdate": { "gt": "2021-04-01" } }`.
     If the server is unable process any filter, it shall respond with `400 Bad
     Request`.
   schema:
@@ -88,14 +87,7 @@ filterActivities:
         properties:
           near:
             type: string
-    example:
-      lang: eng,ita,deu
-      lastUpdate:
-        gt: '2021-04-01'
-      categories:
-        any: 'example:category'
-      geometries:
-        near: 11.309245,46.862025,10000
+    example: {}
 filterEvents:
   name: filter
   in: query
@@ -147,7 +139,10 @@ filterEvents:
       comma-separated numbers in the following order: a longitude value, a
       latitude value, and a proximity radius in meters.
 
-
+    Notice that if you wish to use one of these examples in a request you must
+    represent them as a JSON objects due to the supported serialization of
+    objects in URLs: for label-specific filters, `{ "lang": "eng,ita,deu" }`;
+    and for simple generic filters, `{ "lastUpdate": { "gt": "2021-04-01" } }`.
     If the server is unable process any filter, it shall respond with `400 Bad
     Request`.
   schema:
@@ -174,11 +169,4 @@ filterEvents:
         properties:
           near:
             type: string
-    example:
-      lang: eng,ita,deu
-      lastUpdate:
-        gt: '2021-04-01'
-      categories:
-        any: 'example:category'
-      geometries:
-        near: 11.309245,46.862025,10000
+    example: {}

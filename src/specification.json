@@ -600,7 +600,7 @@
             "style": "deepObject",
             "explode": true,
             "allowReserved": true,
-            "description": "Filters resources in the endpoint based on \"label-specific\" or \"simple generic\" filters. The available filters are:\n  - `filter[lang]`: filters resources containing text data in the desired\n  languages (e.g., `filter[lang]=eng,ita,deu`). Receives comma-separated\n  ISO 639-3 languages tags.\n\n  - `filter[lastUpdate][gt]`: filters resources updated after a desired\n  date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601\n  date string.\n  \n  - `filter[lastUpdate][lt]`: filters resources updated before a desired\n  date (e.g., `filter[lastUpdate][lt]=2021-04-01`). Receives an ISO 8601\n  date string.\n\n  - `filter[startDate][gt]`: filters events with a start date greater than a\n  desired date (e.g., `filter[startDate][gt]=2021-04-01`). Receives an ISO\n  8601 date string.\n  \n  - `filter[startDate][lt]`: filters events with a start date lower than a\n  desired date (e.g., `filter[startDate][lt]=2021-04-01`). Receives an ISO\n  8601 date string.\n\n  - `filter[endDate][gt]`: filters events with a end date greater than a\n  desired date (e.g., `filter[endDate][gt]=2021-04-01`). Receives an ISO\n  8601 date string.\n  \n  - `filter[endDate][lt]`: filters events with a end date lower than a\n  desired date (e.g., `filter[endDate][lt]=2021-04-01`). Receives an ISO\n  8601 date string.\n\n  - `filter[categories][any]`: filters resources having any of the desired\n  categories (e.g., `filter[categories][any]=example:cat1,example:cat2`).\n  Receives comma-separated category ids.\n\n  - `filter[categories][all]`: filters resources having all of the desired\n  categories (e.g., `filter[categories][all]=example:cat1,example:cat2`).\n  Receives comma-separated category ids.\n\n  - `filter[venues][near]`: filters resources whose venues' geometries are\n  near a desired GPS point (e.g.,\n  `filter[venues][near]=11.309245,46.862025,10000`). Receives three\n  comma-separated numbers in the following order: a longitude value, a\n  latitude value, and a proximity radius in meters.\n\n\nIf the server is unable process any filter, it shall respond with `400 Bad Request`.\n",
+            "description": "Filters resources in the endpoint based on \"label-specific\" or \"simple generic\" filters. The available filters are:\n  - `filter[lang]`: filters resources containing text data in the desired\n  languages (e.g., `filter[lang]=eng,ita,deu`). Receives comma-separated\n  ISO 639-3 languages tags.\n\n  - `filter[lastUpdate][gt]`: filters resources updated after a desired\n  date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601\n  date string.\n  \n  - `filter[lastUpdate][lt]`: filters resources updated before a desired\n  date (e.g., `filter[lastUpdate][lt]=2021-04-01`). Receives an ISO 8601\n  date string.\n\n  - `filter[startDate][gt]`: filters events with a start date greater than a\n  desired date (e.g., `filter[startDate][gt]=2021-04-01`). Receives an ISO\n  8601 date string.\n  \n  - `filter[startDate][lt]`: filters events with a start date lower than a\n  desired date (e.g., `filter[startDate][lt]=2021-04-01`). Receives an ISO\n  8601 date string.\n\n  - `filter[endDate][gt]`: filters events with a end date greater than a\n  desired date (e.g., `filter[endDate][gt]=2021-04-01`). Receives an ISO\n  8601 date string.\n  \n  - `filter[endDate][lt]`: filters events with a end date lower than a\n  desired date (e.g., `filter[endDate][lt]=2021-04-01`). Receives an ISO\n  8601 date string.\n\n  - `filter[categories][any]`: filters resources having any of the desired\n  categories (e.g., `filter[categories][any]=example:cat1,example:cat2`).\n  Receives comma-separated category ids.\n\n  - `filter[categories][all]`: filters resources having all of the desired\n  categories (e.g., `filter[categories][all]=example:cat1,example:cat2`).\n  Receives comma-separated category ids.\n\n  - `filter[venues][near]`: filters resources whose venues' geometries are\n  near a desired GPS point (e.g.,\n  `filter[venues][near]=11.309245,46.862025,10000`). Receives three\n  comma-separated numbers in the following order: a longitude value, a\n  latitude value, and a proximity radius in meters.\n\nNotice that if you wish to use one of these examples in a request you must represent them as a JSON objects due to the supported serialization of objects in URLs: for label-specific filters, `{ \"lang\": \"eng,ita,deu\" }`; and for simple generic filters, `{ \"lastUpdate\": { \"gt\": \"2021-04-01\" } }`. If the server is unable process any filter, it shall respond with `400 Bad Request`.\n",
             "schema": {
               "type": "object",
               "properties": {
@@ -637,18 +637,6 @@
                     }
                   }
                 }
-              },
-              "example": {
-                "lang": "eng,ita,deu",
-                "lastUpdate": {
-                  "gt": "2021-04-01"
-                },
-                "categories": {
-                  "any": "example:category"
-                },
-                "geometries": {
-                  "near": "11.309245,46.862025,10000"
-                }
               }
             }
           },
@@ -664,8 +652,7 @@
             "schema": {
               "type": "string",
               "minLength": 1,
-              "pattern": "(\\w|-)+(,(\\w|-)+)*",
-              "example": "startDate"
+              "pattern": "(\\w|-)+(,(\\w|-)+)*"
             }
           },
           {
@@ -676,8 +663,7 @@
             "description": "Requests for resources to be retrieved in a pseudo-random sequence from a provided seed (e.g., `random=0`). The server shall provide consistent pagination over the same seed value. If a request includes both `random` and `sort` requests, the server shall respond with `400 Bad Request`.",
             "schema": {
               "type": "string",
-              "minLength": 1,
-              "example": 10
+              "minLength": 1
             }
           }
         ],
@@ -2766,15 +2752,11 @@
             "style": "deepObject",
             "explode": true,
             "allowReserved": true,
-            "description": "Selects which fields (i.e., attributes or relationships) should be present in returned resource. Each `fields` query must refer to a single resource type that can be returned in the endpoint (e.g., `fields[categories]=name,url`). If a selected resource type or field does not exist in the endpoint, the server shall respond with `400 Bad Request`.",
+            "description": "Selects which fields (i.e., attributes or relationships) should be present in returned resource. Each `fields` query must refer to a single resource type that can be returned in the endpoint (e.g., `fields[categories]=name,url`). Notice that if you wish to use this example in a request you must represent it as a JSON object due to the supported serialization of objects in URLs: `{ \"categories\": \"name,url\" }`. If a selected resource type or field does not exist in the endpoint, the server shall respond with `400 Bad Request`.\n",
             "schema": {
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              },
-              "example": {
-                "categories": "name",
-                "mediaObjects": "licenseType, copyrightOwner"
               }
             }
           },
@@ -2810,7 +2792,7 @@
             "style": "deepObject",
             "explode": true,
             "allowReserved": true,
-            "description": "Filters resources in the endpoint based on \"label-specific\" or \"simple generic\" filters. The available filters are:\n  - `filter[lang]`: filters resources containing text data in the desired\n  languages (e.g., `filter[lang]=eng,ita,deu`). Receives comma-separated\n  ISO 639-3 languages tags.\n\n  - `filter[lastUpdate][gt]`: filters resources updated after a desired\n  date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601\n  date string.\n  \n  - `filter[lastUpdate][lt]`: filters resources updated before a desired\n  date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601\n  date string.\n\n  - `filter[categories][any]`: filters resources having any of the desired\n  categories (e.g., `filter[categories][any]=example:cat1,example:cat2`).\n  Receives comma-separated category ids.\n\n  - `filter[categories][all]`: filters resources having all of the desired\n  categories (e.g., `filter[categories][all]=example:cat1,example:cat2`).\n  Receives comma-separated category ids.\n\n  - `filter[geometries][near]`: filters resources whose geometries are near\n  a desired GPS point (e.g.,\n  `filter[geometries][near]=11.309245,46.862025,10000`). Receives three\n  comma-separated numbers in the following order: a longitude value, a\n  latitude value, and a proximity radius in meters.\n\n\nIf the server is unable process any filter, it shall respond with `400 Bad Request`.\n",
+            "description": "Filters resources in the endpoint based on \"label-specific\" or \"simple generic\" filters. The available filters are:\n  - `filter[lang]`: filters resources containing text data in the desired\n  languages (e.g., `filter[lang]=eng,ita,deu`). Receives comma-separated\n  ISO 639-3 languages tags.\n\n  - `filter[lastUpdate][gt]`: filters resources updated after a desired\n  date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601\n  date string.\n  \n  - `filter[lastUpdate][lt]`: filters resources updated before a desired\n  date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601\n  date string.\n\n  - `filter[categories][any]`: filters resources having any of the desired\n  categories (e.g., `filter[categories][any]=example:cat1,example:cat2`).\n  Receives comma-separated category ids.\n\n  - `filter[categories][all]`: filters resources having all of the desired\n  categories (e.g., `filter[categories][all]=example:cat1,example:cat2`).\n  Receives comma-separated category ids.\n\n  - `filter[geometries][near]`: filters resources whose geometries are near\n  a desired GPS point (e.g.,\n  `filter[geometries][near]=11.309245,46.862025,10000`). Receives three\n  comma-separated numbers in the following order: a longitude value, a\n  latitude value, and a proximity radius in meters.\n\nNotice that if you wish to use one of these examples in a request you must represent them as a JSON objects due to the supported serialization of objects in URLs: for label-specific filters, `{ \"lang\": \"eng,ita,deu\" }`; and for simple generic filters, `{ \"lastUpdate\": { \"gt\": \"2021-04-01\" } }`. If the server is unable process any filter, it shall respond with `400 Bad Request`.\n",
             "schema": {
               "type": "object",
               "properties": {
@@ -2847,18 +2829,6 @@
                     }
                   }
                 }
-              },
-              "example": {
-                "lang": "eng,ita,deu",
-                "lastUpdate": {
-                  "gt": "2021-04-01"
-                },
-                "categories": {
-                  "any": "example:category"
-                },
-                "geometries": {
-                  "near": "11.309245,46.862025,10000"
-                }
               }
             }
           },
@@ -2871,8 +2841,7 @@
             "description": "Searches resources containing a desired substring in their names, regardless of language or case (e.g., `search[name]=bozen`).\n",
             "schema": {
               "type": "string",
-              "minimum": 1,
-              "example": "bozen"
+              "minimum": 1
             }
           }
         ],

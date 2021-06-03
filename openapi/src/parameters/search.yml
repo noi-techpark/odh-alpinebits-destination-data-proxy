@@ -10,4 +10,3 @@ search:
   schema:
     type: string
     minimum: 1
-    example: bozen

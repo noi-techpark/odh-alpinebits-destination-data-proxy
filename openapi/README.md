@@ -22,7 +22,7 @@ npm install            # run only once to retrieve dependencies
 npm run bundle
 ```
 
-This command compiles the file `src/index.yml` and its dependencies into the files `src/specification.json` and `src/specification.yml`.
+This command compiles the file `src/index.yml` and its dependencies into the files `src/specification.yml`.
 
 If you wish to validate your specification to check whether it violates constraints of the OpenAPI specification, you can run the following command:
 
@@ -39,7 +39,3 @@ npm run host
 ```
 
 By default, page will be hosted on port `3000`, but this can be easily modified in the `package.json` file.
-
-## Deploying Swagger as a Static Page
-
-Additionally, you can use the contents of the folder `/public` to deploy the project as a static page. In fact, when `npm run bundle` is executed, the all necessary files for this static page are already generated.

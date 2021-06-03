@@ -4,16 +4,17 @@ fields:
     style: deepObject
     explode: true
     allowReserved: true
-    description: Selects which fields (i.e., attributes or relationships)
+    description: >
+      Selects which fields (i.e., attributes or relationships)
       should be present in returned resource. Each `fields` query must refer to
       a single resource type that can be returned in the endpoint (e.g.,
-      `fields[categories]=name,url`). If a selected resource type or field does
-      not exist in the endpoint, the server shall respond with `400 Bad
-      Request`.
+      `fields[categories]=name,url`). Notice that if you wish to use this
+      example in a request you must represent it as a JSON object due to the
+      supported serialization of objects in URLs: `{ "categories": "name,url" }`.
+      If a selected resource type or field does not exist in the endpoint, the
+      server shall respond with `400 Bad Request`.
     schema:
       type: object
       additionalProperties:
         type: string
-      example:
-        categories: name
-        mediaObjects: licenseType, copyrightOwner
+      example: {}

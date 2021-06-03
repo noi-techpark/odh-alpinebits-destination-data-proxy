@@ -4,11 +4,10 @@ random:
   style: form
   explode: false
   description: Requests for resources to be retrieved in a pseudo-random
-    sequence from a provided seed (e.g., `random=0`). The server shall provide
-    consistent pagination over the same seed value. If a request includes both
-    `random` and `sort` requests, the server shall respond with `400 Bad
-    Request`.
+    sequence from a provided seed (e.g., `random=0`) which must be a number
+    between 1 and 50. The server shall provide consistent pagination over the
+    same seed value. If a request includes both `random` and `sort` requests,
+    the server shall respond with `400 Bad Request`.
   schema:
     type: string
     minLength: 1
-    example: 10
