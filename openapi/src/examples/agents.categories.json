@@ -1,0 +1,41 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/agents/1/categories"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "categories",
+      "id": "alpinebits:organization",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "abstract": null,
+        "description": null,
+        "name": {
+          "eng": "Organization"
+        },
+        "namespace": "alpinebits",
+        "resourceTypes": [ "agents" ],
+        "shortName": null,
+        "url": null
+      },
+      "relationships": {
+        "children": null,
+        "multimediaDescriptions": null,
+        "parents": null
+      },
+      "links": {
+        "self": "https://example.com/2021-04/categories/alpinebits:organization",
+        "resources": {
+          "agents": "https://example.com/2021-04/agents?filter[categories][any]=alpinebits:organization"
+        }
+      }
+    }
+  ]
+}

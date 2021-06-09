@@ -1,0 +1,41 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/snowparks/1/features"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "features",
+      "id": "example:feature",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "abstract": null,
+        "description": null,
+        "name": {
+          "eng": "Example Feature"
+        },
+        "namespace": "example",
+        "resourceTypes": [ "snowparks" ],
+        "shortName": null,
+        "url": null
+      },
+      "relationships": {
+        "children": null,
+        "multimediaDescriptions": null,
+        "parents": null
+      },
+      "links": {
+        "self": "https://example.com/2021-04/features/example:feature",
+        "resources": {
+          "snowparks": "https://example.com/2021-04/snowparks?filter[features][any]=example:feature"
+        }
+      }
+    }
+  ]
+}

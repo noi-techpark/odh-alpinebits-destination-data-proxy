@@ -1,0 +1,13 @@
+{
+    "links": {
+        "self": "https://example.com/2021-04/",
+        "categories": "https://example.com/2021-04/categories",
+        "events": "https://example.com/2021-04/events",
+        "features": "https://example.com/2021-04/features",
+        "lifts": "https://example.com/2021-04/lifts",
+        "mountainAreas": "https://example.com/2021-04/mountainAreas",
+        "skiSlopes": "https://example.com/2021-04/skiSlopes",
+        "snowparks": "https://example.com/2021-04/snowparks"
+    },
+    "data": null
+}

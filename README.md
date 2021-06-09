@@ -2,7 +2,9 @@
 
 This is a reference implementation for an AlpineBits DestinationData server. The server exposes data from the OpenDataHub API in accordance to the AlpineBits format.
 
-However, this application operates only as proxy to forward requests to the dedicated versions of the reference implementation.
+However, the main purpose of this application is to operate as proxy to forward requests to the dedicated versions of the reference implementation.
+
+Additionally, this project also hosts the OpenAPI specification of the reference implementation. For detailed instructions regarding the OpenAPI specification, click [here](./openapi).
 
 ## Table of contents
 

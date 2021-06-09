@@ -1,0 +1,50 @@
+page:
+  name: page
+  in: query
+  style: deepObject
+  explode: true
+  allowReserved: true
+  description: Allows navigating through paginated resources by specifying the
+    desired page number and/or the desired page size. For example, the query
+    `page[number]=1&page[size]=10` requests the first page of an endpoint
+    providing 10 resources per request (page of size 10). Requests may not
+    specify page size or number, in which case the server shall use default
+    values.
+  schema:
+    type: object
+    properties:
+      number:
+        type: integer
+        minimum: 1
+      size:
+        type: integer
+        minimum: 1
+    example:
+      number: 1
+      size: 10
+pagesize:
+  name: page[size]
+  in: query
+  style: form
+  explode: true
+  allowReserved: true
+  description: Sets the page size of a paginated endpoint, i.e., the maximum
+    number of resources to be returned in a single request. If not specified,
+    the server shall set a default value (e.g., `10`).
+  schema:
+    type: integer
+    minimum: 1
+    example: 10
+pagenumber:
+  name: page[number]
+  in: query
+  style: form
+  explode: true
+  allowReserved: true
+  description: Sets the page number to be returned in the request. If the
+    requested page is greater than the total number of pages, the server shall
+    return respond with status code `404 Not Found`.
+  schema:
+    type: integer
+    minimum: 1
+    example: 1

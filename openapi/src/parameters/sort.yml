@@ -1,0 +1,18 @@
+sort:
+  name: sort
+  in: query
+  style: form
+  explode: false
+  description: Requests for retrieved resources to be sorted by the value some
+    selected field. Sorting requests may be in ascending (e.g.,
+    `sort=startDate`) or descending order (e.g., `sort=-startDate`) by prefixing
+    the field name with a MINUS (U+002D) character. Sorted requests may also
+    take multiple fields as input as well as nested fields (e).g.,
+    `sort=-startDate,name.eng`). If a request includes both `random` and `sort`
+    requests, the server shall respond with `400 Bad Request`. If a server is
+    unable to use any selected fields to sort resources, it shall respond with
+    `400 Bad Request`.
+  schema:
+    type: string
+    minLength: 1
+    pattern: (\w|-)+(,(\w|-)+)*
