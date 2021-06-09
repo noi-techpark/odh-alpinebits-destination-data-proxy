@@ -8,8 +8,8 @@ pipeline {
         
         SERVER_PORT = "1012"
 
-        URL_SWAGGER = "https://swagger.opendatahub.bz.it/?url=https://destinationdata.alpinebits.opendatahub.testingmachine.eu/specification.json"
         URL_BASE = "https://destinationdata.alpinebits.opendatahub.testingmachine.eu"
+        URL_SWAGGER = "https://swagger.opendatahub.bz.it/?url=https://destinationdata.alpinebits.opendatahub.testingmachine.eu/specification.json"
         URL_VERSION_1_0 = "http://docker02.testingmachine.eu:1003"
         URL_VERSION_2021_04 = "http://docker02.testingmachine.eu:1006"
     }
@@ -26,8 +26,8 @@ pipeline {
 
                     echo 'SERVER_PORT=${SERVER_PORT}' >> .env
 
-                    echo 'URL_SWAGGER=${URL_SWAGGER}' >> .env
                     echo 'URL_BASE=${URL_BASE}' >> .env
+                    echo 'URL_SWAGGER=${URL_SWAGGER}' >> .env
                     echo 'URL_VERSION_1_0=${URL_VERSION_1_0}' >> .env
                     echo 'URL_VERSION_2021_04=${URL_VERSION_2021_04}' >> .env
                 """
