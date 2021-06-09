@@ -1,0 +1,41 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/features/example:feature/parents"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "features",
+      "id": "example:superfeature",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "abstract": null,
+        "description": null,
+        "name": {
+          "eng": "Example Parent Feature"
+        },
+        "namespace": "example",
+        "resourceTypes": [ "events" ],
+        "shortName": null,
+        "url": null
+      },
+      "relationships": {
+        "children": null,
+        "multimediaDescriptions": null,
+        "parents": null
+      },
+      "links": {
+        "self": "https://example.com/2021-04/features/example:superfeature",
+        "resources": {
+          "events": "https://example.com/2021-04/events?filter[features][any]=example:superfeature"
+        }
+      }
+    }
+  ]
+}

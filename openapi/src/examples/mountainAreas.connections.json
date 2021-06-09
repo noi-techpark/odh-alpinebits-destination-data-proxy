@@ -1,0 +1,548 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2021-04/mountainAreas/1/connections"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "lifts",
+      "id": "1",
+      "meta": {
+        "dataProvider": "https://example.com",
+        "lastUpdate": "2020-04-01T08:00:00+02:00"
+      },
+      "attributes": {
+        "name": {
+          "deu": "Bergbahn Meran 2000",
+          "eng": "Ropeway Merano 2000",
+          "ita": "Funivia Merano 2000"
+        },
+        "shortName": {
+          "deu": "Meran 2000",
+          "eng": "Merano 2000",
+          "ita": "Merano 2000"
+        },
+        "description": {
+          "ita": "Situata a pochi minuti dalla città di Merano, la Funivia conduce all’area sciistica ed escursionistica Merano 2000, un luogo ideale in cui passare una vacanza all’insegna del movimento e della buona cucina con tutta la famiglia. Grazie al suo clima mite, l’area offre infinite possibilità per il tempo libero in ogni stagione: impianti di risalita, sentieri escursionistici facili e numerosi rifugi in cui sostare per assaporare l’ottima cucina locale in un paesaggio ricco e dominato dalla tranquillità."
+        },
+        "abstract": {
+          "ita": "Situata a pochi minuti dalla città di Merano, la Funivia conduce all’area sciistica ed escursionistica Merano 2000, un luogo ideale in cui passare una vacanza all’insegna del movimento e della buona cucina con tutta la famiglia..."
+        },
+        "url": "https://example.com",
+        "length": 3650,
+        "minAltitude": 1000,
+        "maxAltitude": 2350,
+        "capacity": 200,
+        "personsPerChair": 10,
+        "openingHours": {
+          "dailySchedules": {
+            "2020-12-25": null
+          },
+          "weeklySchedules": [
+            {
+              "validFrom": "2020-01-01",
+              "validTo": "2020-12-31",
+              "monday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "tuesday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "wednesday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "thursday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "friday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "saturday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "sunday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ]
+            }
+          ]
+        },
+        "address": {
+          "street": {
+            "deu": "Naifweg 37",
+            "eng": "37 Val di Nova Street",
+            "ita": "Via Val di Nova, 37"
+          },
+          "city": {
+            "deu": "Meran",
+            "eng": "Merano",
+            "ita": "Merano"
+          },
+          "region": {
+            "deu": "Trentino-Südtirol",
+            "eng": "Trentino-Alto Adige",
+            "ita": "Trentino-Alto Adige"
+          },
+          "country": "IT",
+          "zipcode": "39012",
+          "categories": null,
+          "complement": null
+        },
+        "geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                11.305682659149168,
+                46.66705018437341
+              ],
+              [
+                11.30692720413208,
+                46.667182709603225
+              ],
+              [
+                11.308064460754393,
+                46.667491933875965
+              ]
+            ]
+          }
+        ],
+        "howToArrive": {
+          "ita": "Fino alla stazione a valle della Funivia Merano 2000: dalla stazione ferroviaria di Merano si raggiunge in pochi minuti la stazione a valle Val di Nova con la linea urbana 1A. Da Scena c'è il bus vacanze che porta fino alla Val di Nova.",
+          "deu": "Zur Talstation der Bergbahn Meran 2000: vom Zugbahnhof Meran erreicht man in wenigen Minuten die Talstation Naif mit der Buslinie 1A. Von Schenna aus fährt der Gästebus bis zur Talstation Naif."
+        }
+      },
+      "relationships": {
+        "connections": {
+          "data": [
+            {
+              "type": "skiSlopes",
+              "id": "1"
+            },
+            {
+              "type": "skiSlopes",
+              "id": "2"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/lifts/1/connections/"
+          }
+        },
+        "categories": {
+          "data": [
+            {
+              "type": "categories",
+              "id": "alpinebits:cablecar"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/lifts/1/categories"
+          }
+        },
+        "multimediaDescriptions": {
+          "data": [
+            {
+              "type": "mediaObjects",
+              "id": "1"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/lifts/1/multimediaDescriptions/"
+          }
+        }
+      },
+      "links": {
+        "self": "https://example.com/2021-04/lifts/1"
+      }
+    },
+    {
+      "type": "skiSlopes",
+      "id": "1",
+      "meta": {
+        "dataProvider": "https://example.com",
+        "lastUpdate": "2020-04-01T08:00:00+02:00"
+      },
+      "attributes": {
+        "name": {
+          "ita": "Falzeben I",
+          "deu": "Falzeben I",
+          "eng": "Falzeben I"
+        },
+        "shortName": {
+          "ita": "Falzeben I"
+        },
+        "description": {
+          "ita": "Falzeben I -  Discesa tra i boschi facile, immersa in un panorama da sogno ed ideale per bambini e principianti. Altezza/Lunghezza: 1900 altezza, 3500 m."
+        },
+        "abstract": {
+          "ita": "Falzeben I -  Discesa tra i boschi facile, immersa in un panorama da sogno ed ideale per bambini e principianti."
+        },
+        "url": "https://example.com",
+        "length": 2000,
+        "minAltitude": 1500,
+        "maxAltitude": 2500,
+        "difficulty": {
+          "eu": "novice",
+          "us": "beginner"
+        },
+        "address": {
+          "street": null,
+          "city": {
+            "eng": "Merano"
+          },
+          "region": null,
+          "country": "IT",
+          "zipcode": null,
+          "categories": null,
+          "complement": null
+        },
+        "howToArrive": {
+          "ita": " Le fermate più vicine a Falzeben sono: Falzeben è a 41 metri di distanza a piedi e ci si arriva in 1 minuti di cammino; Villa Schäfer è a 808 metri di distanza a piedi e ci si arriva in 11 minuti di cammino."
+        },
+        "geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                11.305682659149168,
+                46.66705018437341
+              ],
+              [
+                11.30692720413208,
+                46.667182709603225
+              ],
+              [
+                11.308064460754393,
+                46.667491933875965
+              ]
+            ]
+          }
+        ],
+        "openingHours": {
+          "dailySchedules": {
+            "2020-12-25": null
+          },
+          "weeklySchedules": [
+            {
+              "validFrom": "2020-01-01",
+              "validTo": "2020-12-31",
+              "monday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "tuesday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "wednesday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "thursday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "friday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "saturday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "sunday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ]
+            }
+          ]
+        },
+        "snowCondition": {
+          "primarySurface": "powder",
+          "secondarySurface": "packed-powder",
+          "baseSnow": 50,
+          "baseSnowRange": {
+            "lower": 40,
+            "upper": 60
+          },
+          "latestStorm": 40,
+          "obtainedIn": "2020-02-01",
+          "snowOverNight": 5,
+          "groomed": true,
+          "snowMaking": false
+        }
+      },
+      "relationships": {
+        "connections": {
+          "data": [
+            {
+              "type": "skiSlopes",
+              "id": "2"
+            },
+            {
+              "type": "skiSlopes",
+              "id": "3"
+            },
+            {
+              "type": "skiSlopes",
+              "id": "4"
+            },
+            {
+              "type": "lifts",
+              "id": "1"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/skiSlopes/1/connections/"
+          }
+        },
+        "categories": {
+          "data": [
+            {
+              "type": "categories",
+              "id": "alpinebits:standard-ski-slope"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/skiSlopes/1/categories"
+          }
+        },
+        "multimediaDescriptions": {
+          "data": [
+            {
+              "type": "mediaObjects",
+              "id": "2"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/skiSlopes/1/multimediaDescriptions/"
+          }
+        }
+      },
+      "links": {
+        "self": "https://example.com/2021-04/skiSlopes/1"
+      }
+    },
+    {
+      "type": "snowparks",
+      "id": "1",
+      "meta": {
+        "dataProvider": "https://example.com",
+        "lastUpdate": "2020-04-01T08:00:00+02:00"
+      },
+      "attributes": {
+        "name": {
+          "ita": "Snowpark Merano 2000",
+          "deu": "Snowpark Merano 2000",
+          "eng": "Snowpark Merano 2000"
+        },
+        "shortName": {
+          "eng": "Snowpark Merano 2000"
+        },
+        "description": {
+          "eng": "Located in the rear part of the skiing area on the Oswald-Slope, close to the Waidmann Alpine Cottage, the SNOWPARK MERANO 2000 awaits brave Snowboarders and Freestylers. An ambitious project with many kicks, rails, tubes and boxes for newcomers and pros alike. You can reach the Jump Zone from the mountain station of the Ropeway by using the chairlift Piffing."
+        },
+        "abstract": {
+          "eng": "Located in the rear part of the skiing area on the Oswald-Slope, close to the Waidmann Alpine Cottage, the SNOWPARK MERANO 2000 awaits brave Snowboarders and Freestylers..."
+        },
+        "url": "https://example.com",
+        "length": 1300,
+        "minAltitude": 1500,
+        "maxAltitude": 2500,
+        "address": {
+          "street": null,
+          "city": {
+            "eng": "Merano"
+          },
+          "region": null,
+          "country": "IT",
+          "zipcode": null,
+          "categories": null,
+          "complement": null
+        },
+        "howToArrive": null,
+        "difficulty": "intermediate",
+        "geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                11.305682659149168,
+                46.66705018437341
+              ],
+              [
+                11.30692720413208,
+                46.667182709603225
+              ],
+              [
+                11.308064460754393,
+                46.667491933875965
+              ]
+            ]
+          }
+        ],
+        "openingHours": {
+          "dailySchedules": {
+            "2020-12-25": null
+          },
+          "weeklySchedules": [
+            {
+              "validFrom": "2020-01-01",
+              "validTo": "2020-12-31",
+              "monday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "tuesday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "wednesday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "thursday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "friday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "saturday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "sunday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ]
+            }
+          ]
+        },
+        "snowCondition": {
+          "primarySurface": "frozen-granular",
+          "secondarySurface": "packed-powder",
+          "baseSnow": 30,
+          "baseSnowRange": {
+            "lower": 25,
+            "upper": 40
+          },
+          "latestStorm": 5,
+          "obtainedIn": "2020-01-14",
+          "snowOverNight": 0,
+          "groomed": true,
+          "snowMaking": false
+        }
+      },
+      "relationships": {
+        "connections": {
+          "data": [
+            {
+              "type": "skiSlopes",
+              "id": "2"
+            },
+            {
+              "type": "skiSlopes",
+              "id": "3"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/snowparks/1/connections/"
+          }
+        },
+        "features": {
+          "data": [
+            {
+              "type": "features",
+              "id": "example:jib"
+            },
+            {
+              "type": "features",
+              "id": "example:pipe"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/snowparks/1/features"
+          }
+        },
+        "categories": {
+          "data": [
+            {
+              "type": "categories",
+              "id": "example:free-style"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/snowparks/1/categories"
+          }
+        },
+        "multimediaDescriptions": {
+          "data": [
+            {
+              "type": "mediaObjects",
+              "id": "2"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2021-04/snowparks/1/multimediaDescriptions/"
+          }
+        }
+      },
+      "links": {
+        "self": "https://example.com/2021-04/snowparks/1"
+      }
+    }
+  ]
+}

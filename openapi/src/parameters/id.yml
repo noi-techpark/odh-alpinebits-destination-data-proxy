@@ -1,0 +1,8 @@
+id:
+  name: id
+  in: path
+  description: Requests for a resource of matching `{id}` and resource type.
+  required: true
+  schema:
+    type: string
+    minLength: 1

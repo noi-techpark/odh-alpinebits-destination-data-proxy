@@ -1,0 +1,99 @@
+base:
+  get:
+    description: Retrieves a collection of resources of type `features`.
+    tags:
+      - Features
+    parameters:
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      # - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      # - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/features.json
+id:
+  get:
+    description: Retrieves a single resource type `features` with a matching
+      `{id}`.
+    tags:
+      - Features
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/features.id.json
+      '404':
+        description: 404 Not Found
+      '410':
+        description: 410 Gone
+children:
+  get:
+    description: Retrieves the resources in the relationship `children` of a
+      resource of type `features`.
+    tags:
+      - Features
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/features.children.json
+      '404':
+        description: 404 Not Found
+multimediaDescriptions:
+  get:
+    description: Retrieves the resources in the relationship
+      `multimediaDescriptions` of a resource of type `features`.
+    tags:
+      - Features
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/features.multimediaDescriptions.json
+      '404':
+        description: 404 Not Found`
+parents:
+  get:
+    description: Retrieves the resources in the relationship `parents` of a
+      resource of type `features`.
+    tags:
+      - Features
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/features.parents.json
+      '404':
+        description: 404 Not Found
