@@ -10,8 +10,8 @@ pipeline {
 
         URL_BASE = "https://destinationdata.alpinebits.opendatahub.bz.it"
         URL_SWAGGER = "https://swagger.opendatahub.bz.it/?url=https://destinationdata.alpinebits.opendatahub.bz.it/specification.json"
-        URL_VERSION_1_0 = "http://docker04.opendatahub.bz.it:1003"
-        URL_VERSION_2021_04 = "http://docker04.opendatahub.bz.it:1006"
+        URL_VERSION_1_0 = "http://tourism.docker.opendatahub.bz.it:1003"
+        URL_VERSION_2021_04 = "http://tourism.docker.opendatahub.bz.it:1006"
     }
 
     stages {
