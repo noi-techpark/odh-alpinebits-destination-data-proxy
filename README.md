@@ -6,6 +6,8 @@ However, the main purpose of this application is to operate as proxy to forward 
 
 Additionally, this project also hosts the OpenAPI specification of the reference implementation. For detailed instructions regarding the OpenAPI specification, click [here](./openapi).
 
+[![ci odh-alpinebits-destination-data-proxy](https://github.com/noi-techpark/odh-alpinebits-destination-data-proxy/actions/workflows/ci.yml/badge.svg)](https://github.com/noi-techpark/odh-alpinebits-destination-data-proxy/actions/workflows/ci.yml)
+
 ## Table of contents
 
 - [Gettings started](#getting-started)
