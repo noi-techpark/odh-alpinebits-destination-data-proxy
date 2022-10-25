@@ -52,6 +52,13 @@ jobs:
           X_URL_VERSION_2021_04: "http://docker02.testingmachine.eu:1006"
           X_URL_VERSION_2022_04: "http://docker02.testingmachine.eu:1018"
 
+      - name: create openapi specification 
+        uses: noi-techpark/github-actions/npm-build@v2
+        with:
+          working-directory: './openapi/'
+          node-version: '14'
+          build-command: 'npm run bundle'
+
       - name: Build and push 
         uses: noi-techpark/github-actions/docker-build-and-push@v2
         with:
