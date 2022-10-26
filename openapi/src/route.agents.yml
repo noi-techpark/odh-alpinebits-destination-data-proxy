@@ -38,8 +38,6 @@ id:
                 $ref: examples/agents.id.json
       '404':
         description: 404 Not Found
-      '410':
-        description: 410 Gone
 categories:
   get:
     description: Retrieves the resources in the relationship `categories` of a
@@ -59,7 +57,6 @@ categories:
                 $ref: examples/agents.categories.json
       '404':
         description: 404 Not Found
-      # TODO: review if relationships should also return status code 410 if the {id} resource is deleted
 multimediaDescriptions:
   get:
     description: Retrieves the resources in the relationship

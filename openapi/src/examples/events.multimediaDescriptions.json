@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/events/1/multimediaDescriptions"
+      "self": "https://example.com/2022-04/events/1/multimediaDescriptions"
   },
   "included": null,
   "data": [
@@ -31,7 +31,7 @@
         "copyrightOwner": null
       },
       "links": {
-        "self": "https://example.com/2021-04/mediaObjects/1"
+        "self": "https://example.com/2022-04/mediaObjects/1"
       }
     }
   ]

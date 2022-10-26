@@ -7,11 +7,11 @@
     "pages": 10
   },
   "links": {
-      "next": "https://example.com/2021-04/agents?page[number]=2",
-      "prev": "https://example.com/2021-04/agents?page[number]=1",
-      "first": "https://example.com/2021-04/agents?page[number]=1",
-      "last": "https://example.com/2021-04/agents?page[number]=10",
-      "self": "https://example.com/2021-04/agents"
+      "next": "https://example.com/2022-04/agents?page[number]=2",
+      "prev": "https://example.com/2022-04/agents?page[number]=1",
+      "first": "https://example.com/2022-04/agents?page[number]=1",
+      "last": "https://example.com/2022-04/agents?page[number]=10",
+      "self": "https://example.com/2022-04/agents"
   },
   "included": null,
   "data": [
@@ -146,7 +146,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/agents/1/categories"
+            "related": "https://example.com/2022-04/agents/1/categories"
           }
         },
         "multimediaDescriptions": {
@@ -157,12 +157,12 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/agents/1/multimediaDescriptions"
+            "related": "https://example.com/2022-04/agents/1/multimediaDescriptions"
           }
         }
       },
       "links": {
-        "self": "https://example.com/2021-04/agents/1"
+        "self": "https://example.com/2022-04/agents/1"
       }
     }
   ]

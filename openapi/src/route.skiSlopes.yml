@@ -38,8 +38,6 @@ id:
                 $ref: examples/skiSlopes.id.json
       '404':
         description: 404 Not Found
-      '410':
-        description: 410 Gone
 categories:
   get:
     description: Retrieves the resources in the relationship `categories` of a

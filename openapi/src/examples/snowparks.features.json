@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/snowparks/1/features"
+      "self": "https://example.com/2022-04/snowparks/1/features"
   },
   "included": null,
   "data": [
@@ -31,9 +31,9 @@
         "parents": null
       },
       "links": {
-        "self": "https://example.com/2021-04/features/example:feature",
+        "self": "https://example.com/2022-04/features/example:feature",
         "resources": {
-          "snowparks": "https://example.com/2021-04/snowparks?filter[features][any]=example:feature"
+          "snowparks": "https://example.com/2022-04/snowparks?filter[features][any]=example:feature"
         }
       }
     }

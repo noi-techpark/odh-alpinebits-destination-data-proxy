@@ -38,8 +38,6 @@ id:
                 $ref: examples/mediaObjects.id.json
       '404':
         description: 404 Not Found
-      '410':
-        description: 410 Gone
 categories:
   get:
     description: Retrieves the resources in the relationship `categories` of a
@@ -59,10 +57,10 @@ categories:
                 $ref: examples/mediaObjects.categories.json
       '404':
         description: 404 Not Found
-copyrightOwner:
+licenseHolder:
   get:
     description: Retrieves the resources in the relationship
-      `copyrightOwner` of a resource of type `mediaObjects`.
+      `licenseHolder` of a resource of type `mediaObjects`.
     tags:
       - Media Objects
     parameters:
@@ -75,6 +73,6 @@ copyrightOwner:
         content:
             application/vnd.api+json:
               example:
-                $ref: examples/mediaObjects.copyrightOwner.json
+                $ref: examples/mediaObjects.licenseHolder.json
       '404':
         description: 404 Not Found

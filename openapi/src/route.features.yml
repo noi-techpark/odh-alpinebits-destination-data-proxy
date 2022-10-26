@@ -38,8 +38,6 @@ id:
                 $ref: examples/features.id.json
       '404':
         description: 404 Not Found
-      '410':
-        description: 410 Gone
 children:
   get:
     description: Retrieves the resources in the relationship `children` of a

@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/eventSeries/1"
+      "self": "https://example.com/2022-04/eventSeries/1"
   },
   "included": null,
   "data": {
@@ -40,7 +40,7 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/eventSeries/1/categories"
+          "related": "https://example.com/2022-04/eventSeries/1/categories"
         }
       },
       "multimediaDescriptions": {
@@ -51,7 +51,7 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/eventSeries/1/multimediaDescriptions"
+          "related": "https://example.com/2022-04/eventSeries/1/multimediaDescriptions"
         }
       },
       "editions": {
@@ -66,12 +66,12 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/eventSeries/1/editions"
+          "related": "https://example.com/2022-04/eventSeries/1/editions"
         }
       }
     },
     "links": {
-      "self": "https://example.com/2021-04/eventSeries/1"
+      "self": "https://example.com/2022-04/eventSeries/1"
     }
   }
 }

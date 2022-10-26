@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/events/1/subEvents"
+      "self": "https://example.com/2022-04/events/1/subEvents"
   },
   "included": null,
   "data": [
@@ -35,7 +35,7 @@
             "id": "1"
           },
           "links": {
-            "related": "https://example.com/2021-04/events/2/publisher"
+            "related": "https://example.com/2022-04/events/2/publisher"
           }
         },
         "organizers": {
@@ -46,7 +46,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/events/2/organizers"
+            "related": "https://example.com/2022-04/events/2/organizers"
           }
         },
         "sponsors": null,
@@ -61,13 +61,13 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/events/2/venues"
+            "related": "https://example.com/2022-04/events/2/venues"
           }
         },
         "subEvents": null
       },
       "links": {
-        "self": "https://example.com/2021-04/events/2"
+        "self": "https://example.com/2022-04/events/2"
       }
     }
   ]

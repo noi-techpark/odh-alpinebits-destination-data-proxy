@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/events/1"
+      "self": "https://example.com/2022-04/events/1"
   },
   "included": null,
   "data": {
@@ -41,7 +41,7 @@
           "id": "1"
         },
         "links": {
-          "related": "https://example.com/2021-04/events/1/eventSeries"
+          "related": "https://example.com/2022-04/events/1/eventSeries"
         }
       },
       "publisher": {
@@ -50,7 +50,7 @@
           "id": "1"
         },
         "links": {
-          "related": "https://example.com/2021-04/events/1/publisher"
+          "related": "https://example.com/2022-04/events/1/publisher"
         }
       },
       "organizers": {
@@ -61,7 +61,7 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/events/1/organizers"
+          "related": "https://example.com/2022-04/events/1/organizers"
         }
       },
       "sponsors": {
@@ -76,7 +76,7 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/events/1/sponsors"
+          "related": "https://example.com/2022-04/events/1/sponsors"
         }
       },
       "contributors": {
@@ -87,7 +87,7 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/events/1/contributors"
+          "related": "https://example.com/2022-04/events/1/contributors"
         }
       },
       "categories": {
@@ -98,7 +98,7 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/events/1/categories"
+          "related": "https://example.com/2022-04/events/1/categories"
         }
       },
       "multimediaDescriptions": {
@@ -113,7 +113,7 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/events/1/multimediaDescriptions"
+          "related": "https://example.com/2022-04/events/1/multimediaDescriptions"
         }
       },
       "venues": {
@@ -124,7 +124,7 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/events/1/venues"
+          "related": "https://example.com/2022-04/events/1/venues"
         }
       },
       "subEvents": {
@@ -139,12 +139,12 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/events/1/subEvents"
+          "related": "https://example.com/2022-04/events/1/subEvents"
         }
       }
     },
     "links": {
-      "self": "https://example.com/2021-04/events/1"
+      "self": "https://example.com/2022-04/events/1"
     }
   }
 }
