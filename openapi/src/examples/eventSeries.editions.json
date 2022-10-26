@@ -33,7 +33,11 @@
         "endDate": "2020-07-07T23:30:00+00:00",
         "url": "https://www.suedtiroljazzfestival.com/",
         "status": "published",
-        "capacity": 1000
+        "inPersonCapacity": 1000,
+        "onlineCapacity": null,
+        "participationUrl": null,
+        "recorded": null,
+        "registrationUrl": null
       },
       "relationships": {
         "series": {

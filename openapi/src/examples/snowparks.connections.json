@@ -128,7 +128,7 @@
         "area": 36000,
         "minAltitude": 1200,
         "maxAltitude": 2000,
-        "totalTrailLength": 4000,
+        "totalSlopeLength": 4000,
         "totalParkArea": 20000,
         "totalParkLength": 1000,
         "snowCondition": {

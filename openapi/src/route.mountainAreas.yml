@@ -19,6 +19,23 @@ base:
             application/vnd.api+json:
               example:
                 $ref: examples/mountainAreas.json
+  post:
+    description: Creates a resources of type `mountainAreas`.
+    tags:
+      - Mountain Areas
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/mountainAreas.id.json
+            
 id:
   get:
     description: Retrieves a single resource type `mountainAreas` with a matching
@@ -38,6 +55,35 @@ id:
                 $ref: examples/mountainAreas.id.json
       '404':
         description: 404 Not Found
+  patch:
+    description: Updates the `mountainAreas` resource with a matching `{id}`.
+    tags:
+      - Mountain Areas
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+            # example:
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/mountainAreas.id.json
+    parameters:
+      - $ref: parameters/id.yml#/id
+  delete:
+    description: Deletes the `mountainAreas` resource with a matching `{id}`.
+    tags:
+      - Mountain Areas
+    parameters:
+      - $ref: parameters/id.yml#/id
+    responses:
+      '204':
+        description: No Content
+
 areaOwner:
   get:
     description: Retrieves the resources in the relationship `areaOwner` of a

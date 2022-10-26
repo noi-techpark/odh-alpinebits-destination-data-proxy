@@ -28,7 +28,7 @@
         "area": null,
         "minAltitude": null,
         "maxAltitude": null,
-        "totalTrailLength": null,
+        "totalSlopeLength": null,
         "totalParkArea": null,
         "totalParkLength": null,
         "snowCondition": null

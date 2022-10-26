@@ -28,55 +28,13 @@ base:
         'application/vnd.api+json':
           schema:
             type: 'object'
-            example:
-              {
-                "data": {
-                  "id": "alpinebits",
-                  "type": "agents",
-                  "meta": {
-                    "dataProvider": "https://example.com"
-                  },
-                  "attributes": {
-                    "contactPoints": [
-                      {
-                        "email": "info@alpinebits.org",
-                        "telephone": "+390000000000",
-                        "address": {
-                          "street": {
-                            "deu": "Bozner Straße Nr. 63/A"
-                          },
-                          "city": {
-                            "deu": "Frangart"
-                          },
-                          "region": {
-                            "deu": "Frangart"
-                          },
-                          "country": "IT",
-                          "zipCode": "39057"
-                        },
-                        "availableHours": null
-                      }
-                    ],
-                    "description": {
-                      "eng": "The \"AlpineBits Alliance\" is a group of SME operating in the touristic sector working together to innovate and open the data exchange in the alpine tourism, and therefore to optimize the online presence, sales and marketing efforts of the hotels and other accommodations in the alpine territory and also worldwide."
-                    },
-                    "name": {
-                      "eng": "AlpineBits Alliance"
-                    },
-                    "url": "https://people.utwente.nl/c.moraisfonseca"
-                  },
-                  "relationships" : {
-                    "categories": {
-                      "data": [
-                        {
-                          "id": "alpinebits:organization"
-                        }
-                      ]
-                    },
-                    "multimediaDescriptions": null
-                  }
-                }
-              }
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/agents.id.json
     
 id:
   get:
@@ -98,19 +56,34 @@ id:
       '404':
         description: 404 Not Found
   patch:
-    description: Retrieves a single resource type `agents` with a matching
-      `{id}`.
+    description: Updates the `agents` resource with a matching `{id}`.
     tags:
       - Agents
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+            # example:
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/agents.id.json
     parameters:
       - $ref: parameters/id.yml#/id
   delete:
-    description: Retrieves a single resource type `agents` with a matching
-      `{id}`.
+    description: Deletes the `agents` resource with a matching `{id}`.
     tags:
       - Agents
     parameters:
       - $ref: parameters/id.yml#/id
+    responses:
+      '204':
+        description: No Content
+        
 categories:
   get:
     description: Retrieves the resources in the relationship `categories` of a

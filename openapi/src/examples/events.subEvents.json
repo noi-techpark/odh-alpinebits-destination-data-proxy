@@ -25,7 +25,11 @@
         "endDate": null,
         "url": null,
         "status": null,
-        "capacity": null
+        "inPersonCapacity": null,
+        "onlineCapacity": null,
+        "participationUrl": null,
+        "recorded": null,
+        "registrationUrl": null
       },
       "relationships": {
         "series": null,

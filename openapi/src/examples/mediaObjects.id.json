@@ -47,7 +47,7 @@
           "related": "https://example.com/2022-04/mediaObjects/1/categories"
         }
       },
-      "copyrightOwner": {
+      "licenseHolder": {
         "data": {
           "type": "agents",
           "id": "0"

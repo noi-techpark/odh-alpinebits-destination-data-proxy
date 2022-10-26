@@ -16,6 +16,7 @@
       },
       "attributes": {
         "abstract": null,
+        "author": null,
         "contentType": "audio/mpeg3",
         "description": null,
         "duration": null,
@@ -28,7 +29,7 @@
       },
       "relationships": {
         "categories": null,
-        "copyrightOwner": null
+        "licenseHolder": null
       },
       "links": {
         "self": "https://example.com/2022-04/mediaObjects/1"
