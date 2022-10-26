@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/features/example:feature/children"
+      "self": "https://example.com/2022-04/features/example:feature/children"
   },
   "included": null,
   "data": [
@@ -31,9 +31,9 @@
         "parents": null
       },
       "links": {
-        "self": "https://example.com/2021-04/features/example:subfeature",
+        "self": "https://example.com/2022-04/features/example:subfeature",
         "resources": {
-          "events": "https://example.com/2021-04/events?filter[features][any]=example:subfeature"
+          "events": "https://example.com/2022-04/events?filter[features][any]=example:subfeature"
         }
       }
     }

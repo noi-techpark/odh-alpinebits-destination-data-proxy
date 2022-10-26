@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/mountainAreas/1/subAreas"
+      "self": "https://example.com/2022-04/mountainAreas/1/subAreas"
   },
   "included": null,
   "data": [
@@ -28,7 +28,7 @@
         "area": null,
         "minAltitude": null,
         "maxAltitude": null,
-        "totalTrailLength": null,
+        "totalSlopeLength": null,
         "totalParkArea": null,
         "totalParkLength": null,
         "snowCondition": null
@@ -44,7 +44,7 @@
         "subAreas": null
       },
       "links": {
-        "self": "https://example.com/2021-04/mountainAreas/2"
+        "self": "https://example.com/2022-04/mountainAreas/2"
       }
     }
   ]

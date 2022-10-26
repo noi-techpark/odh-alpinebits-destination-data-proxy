@@ -1,0 +1,17 @@
+{
+    "links": {
+        "self": "https://example.com/2022-04/",
+        "agents": "https://example.com/2022-04/agents",
+        "categories": "https://example.com/2022-04/categories",
+        "events": "https://example.com/2022-04/events",
+        "eventSeries": "https://example.com/2022-04/eventSeries",
+        "features": "https://example.com/2022-04/features",
+        "lifts": "https://example.com/2022-04/lifts",
+        "mediaObjects": "https://example.com/2022-04/mediaObjects",
+        "mountainAreas": "https://example.com/2022-04/mountainAreas",
+        "skiSlopes": "https://example.com/2022-04/skiSlopes",
+        "snowparks": "https://example.com/2022-04/snowparks",
+        "venues": "https://example.com/2022-04/venues"
+    },
+    "data": null
+}

@@ -15,8 +15,8 @@ base:
 2021-04:
   get:
     operationId: /2021-04
-    description: Retrieves links to the base endpoints of available resource 
-      types.
+    description: Retrieves links to the base endpoints of resource 
+      types available under version `2021-04`.
     tags:
       - Base
     responses:
@@ -26,3 +26,17 @@ base:
           application/vnd.api+json:
             example:
               $ref: examples/2021-04.json
+2022-04:
+  get:
+    operationId: /2022-04
+    description: Retrieves links to the base endpoints of resource 
+      types available under version `2022-04`.
+    tags:
+      - Base
+    responses:
+      '200':
+        description: OK
+        content:
+          application/vnd.api+json:
+            example:
+              $ref: examples/2022-04.json

@@ -4,169 +4,56 @@ filter:
   style: deepObject
   explode: true
   allowReserved: true
-  description: Filters resources in the endpoint based on "label-specific" or
-    "simple generic" filters. Label-specific filters have their behavior and
-    syntax defined by the server (e.g., a filter for resources available in
-    desired languages, `filter[lang]=eng,ita,deu`). Simple generic filters
-    combine a field (among the fields in the resources present in `data`) and
-    a logical operand (e.g., filter resources with a last update value greater
-    than a certain date, `filter[lastUpdate][gt]=2021-04-01`). The operands
-    and their behavior is defined by the standard. Filters may refer to nested
-    fields (e.g., `filter[name.eng][exists]=true`). If the server is unable
-    process any filter, it shall respond with `400 Bad Request`.
+  description: >
+    Filters resources in the endpoint given a field of the of the resource,
+    an operation, and the desired value using the following syntax
+    `filter["field"]["operand"]="value"`. The following operands are available:
+      - `exists`: filters resources based on whether they have the desired
+        field (e.g., `filter[description][exists]=true`). A `"field"` can be
+        `"lastUpdate"`, an attribute, or a relationship of the resource. A
+        `"value"` must be a boolean value.
+
+      - `eq`: filters resources that have the selected field equal to the
+        desired value (e.g., `filter[status][eq]=published`). A `"field"` can
+        be any primitive type attribute. A `"value"` must be primitive JSON
+        value matching the field's type.
+
+      - `neq`: filters resources that have the selected field not equal to the
+        desired value (e.g., `filter[status][neq]=published`). A `"field"` can
+        be any primitive type attribute. A `"value"` must be primitive JSON
+        value matching the field's type.
+
+      - `gt`: filters resources that have the selected field greater than the
+        desired value (e.g., `filter[lastUpdate][gt]=2022-04-01`). A `"field"` can
+        be `"lastUpdate"` any primitive type attribute. A `"value"` must be primitive JSON
+        value matching the field's type.
+
+      - `gte`: filters resources that have the selected field  greater than or equal to the
+        desired value (e.g., `filter[lastUpdate][gte]=2022-04-01`). A `"field"` can
+        be `"lastUpdate"` any primitive type attribute. A `"value"` must be primitive JSON
+        value matching the field's type.
+
+      - `lt`: filters resources that have the selected field lower than the
+        desired value (e.g., `filter[lastUpdate][lt]=2022-04-01`). A `"field"` can
+        be `"lastUpdate"` any primitive type attribute. A `"value"` must be primitive JSON
+        value matching the field's type.
+
+      - `lte`: filters resources that have the selected field  lower than or equal to the
+        desired value (e.g., `filter[lastUpdate][lte]=2022-04-01`). A `"field"` can
+        be `"lastUpdate"` any primitive type attribute. A `"value"` must be primitive JSON
+        value matching the field's type.
+
+    Additionally, two special filters are available on ski slope collection.
+    These can also be filtered based on their specific difficulties by using
+    `"difficulty.eu"` or `"difficulty.us"` in place of `"field"` (e.g.,
+    `filter[difficulty.us][eq]=beginner`).
+
+
+    Notice that if you wish to use one of these examples in a request you must
+    represent them as a JSON objects due to Swagger's supported serialization of
+    objects in URLs:  `{ "lastUpdate": { "gt": "2022-04-01" } }`.
   schema:
     type: object
     additionalProperties:
-      anyOf:
-        - type: string
         - type: object
-          additionalProperties:
-            type: string
-filterActivities:
-  name: filter
-  in: query
-  style: deepObject
-  explode: true
-  allowReserved: true
-  description: >
-    Filters resources in the endpoint based on "label-specific" or
-    "simple generic" filters. The available filters are:
-      - `filter[lang]`: filters resources containing text data in the desired
-      languages (e.g., `filter[lang]=eng,ita,deu`). Receives comma-separated
-      ISO 639-3 languages tags.
-
-      - `filter[lastUpdate][gt]`: filters resources updated after a desired
-      date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601
-      date string.
-      
-      - `filter[lastUpdate][lt]`: filters resources updated before a desired
-      date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601
-      date string.
-
-      - `filter[categories][any]`: filters resources having any of the desired
-      categories (e.g., `filter[categories][any]=example:cat1,example:cat2`).
-      Receives comma-separated category ids.
-
-      - `filter[categories][all]`: filters resources having all of the desired
-      categories (e.g., `filter[categories][all]=example:cat1,example:cat2`).
-      Receives comma-separated category ids.
-
-      - `filter[geometries][near]`: filters resources whose geometries are near
-      a desired GPS point (e.g.,
-      `filter[geometries][near]=11.309245,46.862025,10000`). Receives three
-      comma-separated numbers in the following order: a longitude value, a
-      latitude value, and a proximity radius in meters.
-
-    Notice that if you wish to use one of these examples in a request you must
-    represent them as a JSON objects due to the supported serialization of
-    objects in URLs: for label-specific filters, `{ "lang": "eng,ita,deu" }`;
-    and for simple generic filters, `{ "lastUpdate": { "gt": "2021-04-01" } }`.
-    If the server is unable process any filter, it shall respond with `400 Bad
-    Request`.
-  schema:
-    type: object
-    properties:
-      lang:
-        type: string
-      lastUpdate:
-        type: object
-        properties:
-          gt:
-            type: string
-          lt:
-            type: string
-      categories:
-        type: object
-        properties:
-          any:
-            type: string
-          all:
-            type: string
-      geometries:
-        type: object
-        properties:
-          near:
-            type: string
-    example: {}
-filterEvents:
-  name: filter
-  in: query
-  style: deepObject
-  explode: true
-  allowReserved: true
-  description: >
-    Filters resources in the endpoint based on "label-specific" or
-    "simple generic" filters. The available filters are:
-      - `filter[lang]`: filters resources containing text data in the desired
-      languages (e.g., `filter[lang]=eng,ita,deu`). Receives comma-separated
-      ISO 639-3 languages tags.
-
-      - `filter[lastUpdate][gt]`: filters resources updated after a desired
-      date (e.g., `filter[lastUpdate][gt]=2021-04-01`). Receives an ISO 8601
-      date string.
-      
-      - `filter[lastUpdate][lt]`: filters resources updated before a desired
-      date (e.g., `filter[lastUpdate][lt]=2021-04-01`). Receives an ISO 8601
-      date string.
-
-      - `filter[startDate][gt]`: filters events with a start date greater than a
-      desired date (e.g., `filter[startDate][gt]=2021-04-01`). Receives an ISO
-      8601 date string.
-      
-      - `filter[startDate][lt]`: filters events with a start date lower than a
-      desired date (e.g., `filter[startDate][lt]=2021-04-01`). Receives an ISO
-      8601 date string.
-
-      - `filter[endDate][gt]`: filters events with a end date greater than a
-      desired date (e.g., `filter[endDate][gt]=2021-04-01`). Receives an ISO
-      8601 date string.
-      
-      - `filter[endDate][lt]`: filters events with a end date lower than a
-      desired date (e.g., `filter[endDate][lt]=2021-04-01`). Receives an ISO
-      8601 date string.
-
-      - `filter[categories][any]`: filters resources having any of the desired
-      categories (e.g., `filter[categories][any]=example:cat1,example:cat2`).
-      Receives comma-separated category ids.
-
-      - `filter[categories][all]`: filters resources having all of the desired
-      categories (e.g., `filter[categories][all]=example:cat1,example:cat2`).
-      Receives comma-separated category ids.
-
-      - `filter[venues][near]`: filters resources whose venues' geometries are
-      near a desired GPS point (e.g.,
-      `filter[venues][near]=11.309245,46.862025,10000`). Receives three
-      comma-separated numbers in the following order: a longitude value, a
-      latitude value, and a proximity radius in meters.
-
-    Notice that if you wish to use one of these examples in a request you must
-    represent them as a JSON objects due to the supported serialization of
-    objects in URLs: for label-specific filters, `{ "lang": "eng,ita,deu" }`;
-    and for simple generic filters, `{ "lastUpdate": { "gt": "2021-04-01" } }`.
-    If the server is unable process any filter, it shall respond with `400 Bad
-    Request`.
-  schema:
-    type: object
-    properties:
-      lang:
-        type: string
-      lastUpdate:
-        type: object
-        properties:
-          gt:
-            type: string
-          lt:
-            type: string
-      categories:
-        type: object
-        properties:
-          any:
-            type: string
-          all:
-            type: string
-      geometries:
-        type: object
-        properties:
-          near:
-            type: string
-    example: {}
+    example: { "lastUpdate": { "gt": "2022-04-01" } }

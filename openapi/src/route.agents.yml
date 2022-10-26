@@ -8,9 +8,9 @@ base:
       - $ref: parameters/fields.yml#/fields
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
-      # - $ref: parameters/filter.yml#/filter
+      - $ref: parameters/filter.yml#/filter
       # - $ref: parameters/search.yml#/search
-      # - $ref: parameters/sort.yml#/sort
+      - $ref: parameters/sort.yml#/sort
       # - $ref: parameters/random.yml#/random
     responses:
       '200':
@@ -19,6 +19,23 @@ base:
             application/vnd.api+json:
               example:
                 $ref: examples/agents.json
+  post:
+    description: Creates a resources of type `agents`.
+    tags:
+      - Agents
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/agents.id.json
+    
 id:
   get:
     description: Retrieves a single resource type `agents` with a matching
@@ -38,8 +55,35 @@ id:
                 $ref: examples/agents.id.json
       '404':
         description: 404 Not Found
-      '410':
-        description: 410 Gone
+  patch:
+    description: Updates the `agents` resource with a matching `{id}`.
+    tags:
+      - Agents
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+            # example:
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/agents.id.json
+    parameters:
+      - $ref: parameters/id.yml#/id
+  delete:
+    description: Deletes the `agents` resource with a matching `{id}`.
+    tags:
+      - Agents
+    parameters:
+      - $ref: parameters/id.yml#/id
+    responses:
+      '204':
+        description: No Content
+        
 categories:
   get:
     description: Retrieves the resources in the relationship `categories` of a
@@ -50,6 +94,12 @@ categories:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -59,7 +109,6 @@ categories:
                 $ref: examples/agents.categories.json
       '404':
         description: 404 Not Found
-      # TODO: review if relationships should also return status code 410 if the {id} resource is deleted
 multimediaDescriptions:
   get:
     description: Retrieves the resources in the relationship
@@ -70,6 +119,12 @@ multimediaDescriptions:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
