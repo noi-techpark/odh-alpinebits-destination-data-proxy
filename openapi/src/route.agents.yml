@@ -8,9 +8,9 @@ base:
       - $ref: parameters/fields.yml#/fields
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
-      # - $ref: parameters/filter.yml#/filter
+      - $ref: parameters/filter.yml#/filter
       # - $ref: parameters/search.yml#/search
-      # - $ref: parameters/sort.yml#/sort
+      - $ref: parameters/sort.yml#/sort
       # - $ref: parameters/random.yml#/random
     responses:
       '200':
@@ -19,6 +19,65 @@ base:
             application/vnd.api+json:
               example:
                 $ref: examples/agents.json
+  post:
+    description: Creates a resources of type `agents`.
+    tags:
+      - Agents
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+            example:
+              {
+                "data": {
+                  "id": "alpinebits",
+                  "type": "agents",
+                  "meta": {
+                    "dataProvider": "https://example.com"
+                  },
+                  "attributes": {
+                    "contactPoints": [
+                      {
+                        "email": "info@alpinebits.org",
+                        "telephone": "+390000000000",
+                        "address": {
+                          "street": {
+                            "deu": "Bozner Straße Nr. 63/A"
+                          },
+                          "city": {
+                            "deu": "Frangart"
+                          },
+                          "region": {
+                            "deu": "Frangart"
+                          },
+                          "country": "IT",
+                          "zipCode": "39057"
+                        },
+                        "availableHours": null
+                      }
+                    ],
+                    "description": {
+                      "eng": "The \"AlpineBits Alliance\" is a group of SME operating in the touristic sector working together to innovate and open the data exchange in the alpine tourism, and therefore to optimize the online presence, sales and marketing efforts of the hotels and other accommodations in the alpine territory and also worldwide."
+                    },
+                    "name": {
+                      "eng": "AlpineBits Alliance"
+                    },
+                    "url": "https://people.utwente.nl/c.moraisfonseca"
+                  },
+                  "relationships" : {
+                    "categories": {
+                      "data": [
+                        {
+                          "id": "alpinebits:organization"
+                        }
+                      ]
+                    },
+                    "multimediaDescriptions": null
+                  }
+                }
+              }
+    
 id:
   get:
     description: Retrieves a single resource type `agents` with a matching
@@ -38,6 +97,20 @@ id:
                 $ref: examples/agents.id.json
       '404':
         description: 404 Not Found
+  patch:
+    description: Retrieves a single resource type `agents` with a matching
+      `{id}`.
+    tags:
+      - Agents
+    parameters:
+      - $ref: parameters/id.yml#/id
+  delete:
+    description: Retrieves a single resource type `agents` with a matching
+      `{id}`.
+    tags:
+      - Agents
+    parameters:
+      - $ref: parameters/id.yml#/id
 categories:
   get:
     description: Retrieves the resources in the relationship `categories` of a
@@ -48,6 +121,12 @@ categories:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -67,6 +146,12 @@ multimediaDescriptions:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK

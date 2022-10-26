@@ -6,9 +6,10 @@ include:
   description: Includes resources present in selected relationships in the
     `included` array of the response. Only relationships of objects in the
     `data` field can be selected. Relationship names must be separated with a
-    comma (e.g., `include=categories,multimediaDescriptions`). If a selected
-    relationship does not exist among the relationships of resources in `data`,
-    the server shall respond with `400 Bad Request`.
+    comma (e.g., `include=categories,multimediaDescriptions`).
+    # If a selected
+    # relationship does not exist among the relationships of resources in `data`,
+    # the server shall respond with `400 Bad Request`.
   schema:
     type: string
     minLength: 1

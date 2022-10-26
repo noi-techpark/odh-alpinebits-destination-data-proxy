@@ -9,9 +9,9 @@ base:
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
       - $ref: parameters/filter.yml#/filter
-      - $ref: parameters/search.yml#/search
+      # - $ref: parameters/search.yml#/search
       - $ref: parameters/sort.yml#/sort
-      - $ref: parameters/random.yml#/random
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -48,6 +48,12 @@ categories:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -64,6 +70,7 @@ licenseHolder:
     tags:
       - Media Objects
     parameters:
+      - $ref: parameters/id.yml#/id
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields

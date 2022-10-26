@@ -8,9 +8,9 @@ base:
       - $ref: parameters/fields.yml#/fields
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
-      # - $ref: parameters/filter.yml#/filter
+      - $ref: parameters/filter.yml#/filter
       # - $ref: parameters/search.yml#/search
-      # - $ref: parameters/sort.yml#/sort
+      - $ref: parameters/sort.yml#/sort
       # - $ref: parameters/random.yml#/random
     responses:
       '200':
@@ -46,6 +46,7 @@ areaOwner:
       - Mountain Areas
     parameters:
       - $ref: parameters/id.yml#/id
+      - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
     responses:
@@ -67,6 +68,12 @@ categories:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -86,6 +93,12 @@ connections:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -105,6 +118,12 @@ lifts:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -124,6 +143,12 @@ multimediaDescriptions:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -143,6 +168,12 @@ skiSlopes:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -162,6 +193,12 @@ snowparks:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -181,6 +218,12 @@ subAreas:
       - $ref: parameters/id.yml#/id
       - $ref: parameters/include.yml#/include
       - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
