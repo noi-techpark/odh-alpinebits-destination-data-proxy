@@ -1,0 +1,193 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2022-04/snowparks/1"
+  },
+  "included": null,
+  "data": {
+    "type": "snowparks",
+    "id": "1",
+    "meta": {
+      "dataProvider": "https://example.com",
+      "lastUpdate": "2020-04-01T08:00:00+02:00"
+    },
+    "attributes": {
+      "name": {
+        "ita": "Snowpark Merano 2000",
+        "deu": "Snowpark Merano 2000",
+        "eng": "Snowpark Merano 2000"
+      },
+      "shortName": {
+        "eng": "Snowpark Merano 2000"
+      },
+      "description": {
+        "eng": "Located in the rear part of the skiing area on the Oswald-Slope, close to the Waidmann Alpine Cottage, the SNOWPARK MERANO 2000 awaits brave Snowboarders and Freestylers. An ambitious project with many kicks, rails, tubes and boxes for newcomers and pros alike. You can reach the Jump Zone from the mountain station of the Ropeway by using the chairlift Piffing."
+      },
+      "abstract": {
+        "eng": "Located in the rear part of the skiing area on the Oswald-Slope, close to the Waidmann Alpine Cottage, the SNOWPARK MERANO 2000 awaits brave Snowboarders and Freestylers..."
+      },
+      "url": "https://example.com",
+      "length": 1300,
+      "minAltitude": 1500,
+      "maxAltitude": 2500,
+      "address": {
+        "street": null,
+        "city": {
+          "eng": "Merano"
+        },
+        "region": null,
+        "country": "IT",
+        "zipcode": null,
+        "categories": null,
+        "complement": null
+      },
+      "howToArrive": null,
+      "difficulty": "intermediate",
+      "geometries": [
+        {
+          "type": "LineString",
+          "coordinates": [
+            [
+              11.305682659149168,
+              46.66705018437341
+            ],
+            [
+              11.30692720413208,
+              46.667182709603225
+            ],
+            [
+              11.308064460754393,
+              46.667491933875965
+            ]
+          ]
+        }
+      ],
+      "openingHours": {
+        "dailySchedules": {
+          "2020-12-25": null
+        },
+        "weeklySchedules": [
+          {
+            "validFrom": "2020-01-01",
+            "validTo": "2020-12-31",
+            "monday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "tuesday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "wednesday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "thursday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "friday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "saturday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ],
+            "sunday": [
+              {
+                "opens": "08:00:00+01:00",
+                "closes": "18:00:00+01:00"
+              }
+            ]
+          }
+        ]
+      },
+      "snowCondition": {
+        "primarySurface": "frozen-granular",
+        "secondarySurface": "packed-powder",
+        "baseSnow": 30,
+        "baseSnowRange": {
+          "lower": 25,
+          "upper": 40
+        },
+        "latestStorm": 5,
+        "obtainedIn": "2020-01-14",
+        "snowOverNight": 0,
+        "groomed": true,
+        "snowMaking": false
+      }
+    },
+    "relationships": {
+      "connections": {
+        "data": [
+          {
+            "type": "skiSlopes",
+            "id": "2"
+          },
+          {
+            "type": "skiSlopes",
+            "id": "3"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2022-04/snowparks/1/connections/"
+        }
+      },
+      "features": {
+        "data": [
+          {
+            "type": "features",
+            "id": "example:jib"
+          },
+          {
+            "type": "features",
+            "id": "example:pipe"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2022-04/snowparks/1/features"
+        }
+      },
+      "categories": {
+        "data": [
+          {
+            "type": "categories",
+            "id": "example:free-style"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2022-04/snowparks/1/categories"
+        }
+      },
+      "multimediaDescriptions": {
+        "data": [
+          {
+            "type": "mediaObjects",
+            "id": "2"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2022-04/snowparks/1/multimediaDescriptions/"
+        }
+      }
+    },
+    "links": {
+      "self": "https://example.com/2022-04/snowparks/1"
+    }
+  }
+}

@@ -3,6 +3,8 @@
   "links": {
     "self": "${URL_BASE}",
     "1.0": "${URL_BASE}/1.0",
-    "2021-04": "${URL_BASE}/2021-04"
+    "2021-04": "${URL_BASE}/2021-04",
+    "2022-04": "${URL_BASE}/2022-04",
+    "swagger": "${URL_SWAGGER}"
   }
 }

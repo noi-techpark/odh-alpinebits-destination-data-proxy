@@ -1,0 +1,1005 @@
+openapi: "3.0.3"
+externalDocs:
+  url: https://www.alpinebits.org/destinationdata/
+info:
+  title: AlpineBits DestinationData Reference Server
+  version: "2022-04"
+  license:
+    name: GPLv3
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
+  description: The AlpineBits DestinationData is an standard for the exchange of
+    data in the alpine tourism sector through REST APIs. This standard relies on
+    well-defined and widely adopted standards, such as JSON Schema, JSON:API,
+    and GeoJSON, to offer a high-quality API design. This document presents an
+    OpenAPI-based documentation of the AlpineBits DestinationData standard. It
+    is intended as a start point for server and client developers to the
+    standard itself and can used by server developers to provide documentation
+    tailored for their implementations.
+  contact:
+    name: AlpineBits Alliance (Editorial)
+    email: info@alpinebits.org
+servers:
+  - description: OpenDataHub Server (Test Machine)
+    url: https://destinationdata.alpinebits.opendatahub.testingmachine.eu/
+  - url: https://destinationdata.alpinebits.opendatahub.bz.it/
+    description: OpenDataHub Server
+  - url: https://example.com/
+    description: Example Server URL
+  # - description: Reference Server - Local Development
+  #   url: http://localhost:8080/
+tags:
+  - name: Base
+    description: Requests to base endpoints
+  - name: Agents
+    description: Requests to resources of type `agents` and related
+  - name: Categories
+    description: Requests to resources of type `categories` and related
+  - name: Events
+    description: Requests to resources of type `events` and related
+  - name: Event Series
+    description: Requests to resources of type `eventSeries` and related
+  - name: Features
+    description: Requests to resources of type `features` and related
+  - name: Lifts
+    description: Requests to resources of type `lifts` and related
+  - name: Media Objects
+    description: Requests to resources of type `mediaObjects` and related
+  - name: Mountain Areas
+    description: Requests to resources of type `mountainAreas` and related
+  - name: Ski Slopes
+    description: Requests to resources of type `skiSlopes` and related
+  - name: Snowparks
+    description: Requests to resources of type `snowparks` and related
+  - name: Venues
+    description: Requests to resources of type `venues` and related
+
+paths:
+  /:
+    $ref: route.base.yml#/base
+  /2021-04:
+    $ref: route.base.yml#/2021-04
+  /2022-04:
+    $ref: route.base.yml#/2022-04
+
+  /2022-04/agents:
+    $ref: route.agents.yml#/base
+  /2022-04/agents/{id}:
+    $ref: route.agents.yml#/id
+  /2022-04/agents/{id}/categories:
+    $ref: route.agents.yml#/categories
+  /2022-04/agents/{id}/multimediaDescriptions:
+    $ref: route.agents.yml#/multimediaDescriptions
+
+  /2022-04/categories:
+    $ref: route.categories.yml#/base
+  /2022-04/categories/{id}:
+    $ref: route.categories.yml#/id
+  /2022-04/categories/{id}/children:
+    $ref: route.categories.yml#/children
+  /2022-04/categories/{id}/multimediaDescriptions:
+    $ref: route.categories.yml#/multimediaDescriptions
+  /2022-04/categories/{id}/parents:
+    $ref: route.categories.yml#/parents
+
+  /2022-04/events:
+    $ref: route.events.yml#/base
+  /2022-04/events/{id}:
+    $ref: route.events.yml#/id
+  /2022-04/events/{id}/categories:
+    $ref: route.events.yml#/categories
+  /2022-04/events/{id}/contributors:
+    $ref: route.events.yml#/contributors
+  /2022-04/events/{id}/multimediaDescriptions:
+    $ref: route.events.yml#/multimediaDescriptions
+  /2022-04/events/{id}/organizers:
+    $ref: route.events.yml#/organizers
+  /2022-04/events/{id}/publisher:
+    $ref: route.events.yml#/publisher
+  /2022-04/events/{id}/series:
+    $ref: route.events.yml#/series
+  /2022-04/events/{id}/sponsors:
+    $ref: route.events.yml#/sponsors
+  /2022-04/events/{id}/subEvents:
+    $ref: route.events.yml#/subEvents
+  /2022-04/events/{id}/venues:
+    $ref: route.events.yml#/venues
+
+  /2022-04/eventSeries:
+    $ref: route.eventSeries.yml#/base
+  /2022-04/eventSeries/{id}:
+    $ref: route.eventSeries.yml#/id
+  /2022-04/eventSeries/{id}/categories:
+    $ref: route.eventSeries.yml#/categories
+  /2022-04/eventSeries/{id}/editions:
+    $ref: route.eventSeries.yml#/editions
+  /2022-04/eventSeries/{id}/multimediaDescriptions:
+    $ref: route.eventSeries.yml#/multimediaDescriptions
+
+  /2022-04/features:
+    $ref: route.features.yml#/base
+  /2022-04/features/{id}:
+    $ref: route.features.yml#/id
+  /2022-04/features/{id}/children:
+    $ref: route.features.yml#/children
+  /2022-04/features/{id}/multimediaDescriptions:
+    $ref: route.features.yml#/multimediaDescriptions
+  /2022-04/features/{id}/parents:
+    $ref: route.features.yml#/parents
+
+  /2022-04/lifts:
+    $ref: route.lifts.yml#/base
+  /2022-04/lifts/{id}:
+    $ref: route.lifts.yml#/id
+  /2022-04/lifts/{id}/categories:
+    $ref: route.lifts.yml#/categories
+  /2022-04/lifts/{id}/connections:
+    $ref: route.lifts.yml#/connections
+  /2022-04/lifts/{id}/multimediaDescriptions:
+    $ref: route.lifts.yml#/multimediaDescriptions
+
+  /2022-04/mediaObjects:
+    $ref: route.mediaObjects.yml#/base
+  /2022-04/mediaObjects/{id}:
+    $ref: route.mediaObjects.yml#/id
+  /2022-04/mediaObjects/{id}/categories:
+    $ref: route.mediaObjects.yml#/categories
+  /2022-04/mediaObjects/{id}/licenseHolder:
+    $ref: route.mediaObjects.yml#/licenseHolder
+
+  /2022-04/mountainAreas:
+    $ref: route.mountainAreas.yml#/base
+  /2022-04/mountainAreas/{id}:
+    $ref: route.mountainAreas.yml#/id
+  /2022-04/mountainAreas/{id}/areaOwner:
+    $ref: route.mountainAreas.yml#/areaOwner
+  /2022-04/mountainAreas/{id}/categories:
+    $ref: route.mountainAreas.yml#/categories
+  /2022-04/mountainAreas/{id}/connections:
+    $ref: route.mountainAreas.yml#/connections
+  /2022-04/mountainAreas/{id}/lifts:
+    $ref: route.mountainAreas.yml#/lifts
+  /2022-04/mountainAreas/{id}/multimediaDescriptions:
+    $ref: route.mountainAreas.yml#/multimediaDescriptions
+  /2022-04/mountainAreas/{id}/skiSlopes:
+    $ref: route.mountainAreas.yml#/skiSlopes
+  /2022-04/mountainAreas/{id}/snowparks:
+    $ref: route.mountainAreas.yml#/snowparks
+  /2022-04/mountainAreas/{id}/subAreas:
+    $ref: route.mountainAreas.yml#/subAreas
+
+  /2022-04/skiSlopes:
+    $ref: route.skiSlopes.yml#/base
+  /2022-04/skiSlopes/{id}:
+    $ref: route.skiSlopes.yml#/id
+  /2022-04/skiSlopes/{id}/categories:
+    $ref: route.skiSlopes.yml#/categories
+  /2022-04/skiSlopes/{id}/connections:
+    $ref: route.skiSlopes.yml#/connections
+  /2022-04/skiSlopes/{id}/multimediaDescriptions:
+    $ref: route.skiSlopes.yml#/multimediaDescriptions
+
+  /2022-04/snowparks:
+    $ref: route.snowparks.yml#/base
+  /2022-04/snowparks/{id}:
+    $ref: route.snowparks.yml#/id
+  /2022-04/snowparks/{id}/categories:
+    $ref: route.snowparks.yml#/categories
+  /2022-04/snowparks/{id}/connections:
+    $ref: route.snowparks.yml#/connections
+  # /2022-04/snowparks/{id}/features:
+  #   $ref: route.snowparks.yml#/features
+  /2022-04/snowparks/{id}/multimediaDescriptions:
+    $ref: route.snowparks.yml#/multimediaDescriptions
+
+  /2022-04/venues:
+    $ref: route.venues.yml#/base
+  /2022-04/venues/{id}:
+    $ref: route.venues.yml#/id
+  /2022-04/venues/{id}/categories:
+    $ref: route.venues.yml#/categories
+  /2022-04/venues/{id}/multimediaDescriptions:
+    $ref: route.venues.yml#/multimediaDescriptions
+
+components:
+  schemas:
+    Agent:
+      description: Schema describing the overall shape of a resource of type `agents`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ agents ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            contactPoint:
+              type: array
+            description:
+              type: object
+            name:
+              type: object
+            shortName:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            categories:
+              type: object
+            multimediaDescriptions:
+              type: object
+        
+    Category:
+      description: Schema describing the overall shape of a resource of type `categories`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ categories ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            description:
+              type: object
+            name:
+              type: object
+            namespace:
+              type: object
+            resourceTypes:
+              type: array
+            shortName:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            children:
+              type: object
+            multimediaDescriptions:
+              type: object
+            parents:
+              type: object
+    
+    Event:
+      description: Schema describing the overall shape of a resource of type `events`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ events ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            description:
+              type: object
+            endDate:
+              type: string
+              format: date-time
+            inPersonCapacity:
+              type: integer
+            name:
+              type: object
+            onlineCapacity:
+              type: integer
+            participationUrl:
+              oneOf:
+                - type: string
+                - type: object
+            recorded:
+              type: boolean
+            registrationUrl:
+              oneOf:
+                - type: string
+                - type: object
+            startDate:
+              type: string
+              format: date-time
+            status:
+              type: string
+              enum:
+                - canceled
+                - published
+            shortName:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            categories:
+              type: object
+            contributors:
+              type: object
+            multimediaDescriptions:
+              type: object
+            organizers:
+              type: object
+            publisher:
+              type: object
+            series:
+              type: object
+            subEvents:
+              type: object
+            venues:
+              type: object
+
+    Event Series:
+      description: Schema describing the overall shape of a resource of type `eventSeries`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ eventSeries ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            description:
+              type: object
+            frequency:
+              type: string
+              enum:
+                - daily
+                - weekly
+                - monthly
+                - bimonthly
+                - quarterly
+                - annual
+                - biennial
+                - triennial
+            name:
+              type: object
+            shortName:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            categories:
+              type: object
+            editions:
+              type: object
+            multimediaDescriptions:
+              type: object
+
+    Feature:
+      description: Schema describing the overall shape of a resource of type `features`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ features ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            description:
+              type: object
+            name:
+              type: object
+            namespace:
+              type: object
+            resourceTypes:
+              type: array
+            shortName:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            children:
+              type: object
+            multimediaDescriptions:
+              type: object
+            parents:
+              type: object
+
+    Lift:
+      description: Schema describing the overall shape of a resource of type `lifts`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ lifts ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            address:
+              type: object
+            capacity:
+              type: integer
+            description:
+              type: object
+            geometries:
+              type: array
+            howToArrive:
+              type: object
+            length:
+              type: integer
+            maxAltitude:
+              type: integer
+            minAltitude:
+              type: integer
+            name:
+              type: object
+            openingHours:
+              type: object
+            personsPerChair:
+              type: integer
+            shortName:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            categories:
+              type: object
+            connections:
+              type: object
+            multimediaDescriptions:
+              type: object
+
+    Media Object:
+      description: Schema describing the overall shape of a resource of type `mediaObjects`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ mediaObjects ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            author:
+              type: string
+            contentType:
+              type: string
+            description:
+              type: object
+            duration:
+              type: integer
+            height:
+              type: integer
+            license:
+              type: string
+            name:
+              type: object
+            shortName:
+              type: object
+            url:
+              type: string
+            width:
+              type: integer
+        relationships:
+          type: object
+          properties:
+            categories:
+              type: object
+            licenseHolder:
+              type: object
+
+    Mountain Area:
+      description: Schema describing the overall shape of a resource of type `mountainAreas`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ mountainAreas ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            area:
+              type: integer
+            description:
+              type: object
+            geometries:
+              type: array
+            howToArrive:
+              type: object
+            maxAltitude:
+              type: integer
+            minAltitude:
+              type: integer
+            name:
+              type: object
+            openingHours:
+              type: object
+            shortName:
+              type: object
+            snowCondition:
+              type: object
+            totalParkLength:
+              type: integer
+            totalSlopeLength:
+              type: integer
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            areaOwner:
+              type: object
+            categories:
+              type: object
+            connections:
+              type: object
+            lifts:
+              type: object
+            multimediaDescriptions:
+              type: object
+            skiSlopes:
+              type: object
+            snowparks:
+              type: object
+            subAreas:
+              type: object
+
+    Ski Slope:
+      description: Schema describing the overall shape of a resource of type `skiSlopes`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ skiSlopes ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            address:
+              type: object
+            capacity:
+              type: integer
+            description:
+              type: object
+            difficulty:
+              type: object
+              properties:
+                eu:
+                  type: string
+                us:
+                  type: string
+            geometries:
+              type: array
+            howToArrive:
+              type: object
+            length:
+              type: integer
+            maxAltitude:
+              type: integer
+            minAltitude:
+              type: integer
+            name:
+              type: object
+            openingHours:
+              type: object
+            snowCondition:
+              type: object
+            shortName:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            categories:
+              type: object
+            connections:
+              type: object
+            multimediaDescriptions:
+              type: object
+
+    Snowpark:
+      description: Schema describing the overall shape of a resource of type `snowparks`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ snowparks ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            address:
+              type: object
+            capacity:
+              type: integer
+            description:
+              type: object
+            difficulty:
+              type: string
+            geometries:
+              type: array
+            howToArrive:
+              type: object
+            length:
+              type: integer
+            maxAltitude:
+              type: integer
+            minAltitude:
+              type: integer
+            name:
+              type: object
+            openingHours:
+              type: object
+            shortName:
+              type: object
+            snowCondition:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            categories:
+              type: object
+            connections:
+              type: object
+            features:
+              type: object
+            multimediaDescriptions:
+              type: object
+
+    Venue:
+      description: Schema describing the overall shape of a resource of type `venues`.
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [ venues ]
+        meta:
+          type: object
+          properties:
+            dataProvider:
+              type: string
+            lastUpdate:
+              type: string
+              format: date-time
+        attributes:
+          type: object
+          properties:
+            abstract:
+              type: object
+            address:
+              type: object
+            description:
+              type: object
+            geometries:
+              type: array
+            howToArrive:
+              type: object
+            name:
+              type: object
+            shortName:
+              type: object
+            url:
+              oneOf:
+                - type: string
+                - type: object
+        relationships:
+          type: object
+          properties:
+            categories:
+              type: object
+            multimediaDescriptions:
+              type: object
+
+    address:
+      description: Schema describing the overall shape of an address datatype.
+      type: object
+      properties:
+        street:
+          type: object
+        city:
+          type: object
+        region:
+          type: object
+        complement:
+          type: object
+        country:
+          type: string
+        zipcode:
+          type: string
+        type:
+          type: string
+
+    contact point:
+      description: Schema describing the overall shape of a contact point datatype.
+      type: object
+      properties:
+        email:
+          type: string
+          format: uri
+        telephone:
+          type: string
+        address:
+          type: object
+        availableHours:
+          type: object
+
+    geometry:
+      description: Schema describing the overall shape of a geometry datatype according to the GeoJSON standard.
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - Point
+            - MultiPoint
+            - LineString
+            - MultiLineString
+            - Polygon
+            - MultiPolygon
+        coordinates:
+          type: array
+
+    hours specification:
+      description: Schema describing the overall shape of an hours specification datatype.
+      type: object
+      properties:
+        dailySchedules:
+          type: array
+          items:
+            type: object
+        weeklySchedules:
+          type: array
+          items:
+            type: object
+            properties:
+              validFrom:
+                type: string
+                format: date-time
+              validTo:
+                type: string
+                format: date-time
+              monday:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    opens:
+                      type: string
+                      format: date-time
+                    closes:
+                      type: string
+                      format: date-time
+              tuesday:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    opens:
+                      type: string
+                      format: date-time
+                    closes:
+                      type: string
+                      format: date-time
+              wednesday:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    opens:
+                      type: string
+                      format: date-time
+                    closes:
+                      type: string
+                      format: date-time
+              thursday:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    opens:
+                      type: string
+                      format: date-time
+                    closes:
+                      type: string
+                      format: date-time
+              friday:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    opens:
+                      type: string
+                      format: date-time
+                    closes:
+                      type: string
+                      format: date-time
+              saturday:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    opens:
+                      type: string
+                      format: date-time
+                    closes:
+                      type: string
+                      format: date-time
+              sunday:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    opens:
+                      type: string
+                      format: date-time
+                    closes:
+                      type: string
+                      format: date-time
+
+    snow condition:
+      description: Schema describing the overall shape of a snow condition datatype.
+      type: object
+      properties:
+        baseSnow:
+          type: integer
+        baseSnowRange:
+          type: object
+          properties:
+            lower:
+              type: integer
+            upper:
+              type: integer
+        groomed:
+          type: boolean
+        latestStorm:
+          type: boolean
+        obtainedIn:
+          type: string
+          format: date-time
+        primarySurface:
+          type: string
+        secondarySurface:
+          type: string
+        snowMaking:
+          type: boolean
+        snowOvernight:
+          type: integer

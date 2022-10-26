@@ -1,0 +1,41 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2022-04/categories/example:category/parents"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "categories",
+      "id": "example:supercategory",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "abstract": null,
+        "description": null,
+        "name": {
+          "eng": "Example Parent Category"
+        },
+        "namespace": "example",
+        "resourceTypes": [ "events" ],
+        "shortName": null,
+        "url": null
+      },
+      "relationships": {
+        "children": null,
+        "multimediaDescriptions": null,
+        "parents": null
+      },
+      "links": {
+        "self": "https://example.com/2022-04/categories/example:supercategory",
+        "resources": {
+          "events": "https://example.com/2022-04/events?filter[categories][any]=example:supercategory"
+        }
+      }
+    }
+  ]
+}

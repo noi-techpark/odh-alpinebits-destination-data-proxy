@@ -1,0 +1,77 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2022-04/eventSeries/1"
+  },
+  "included": null,
+  "data": {
+    "type": "eventSeries",
+    "id": "1",
+    "meta": {
+      "dataProvider": "https://example.com",
+      "lastUpdate": "2020-04-01T08:00:00+02:00"
+    },
+    "attributes": {
+      "abstract": {
+        "eng": "The Südtirol Jazzfestival Alto Adige was held for the first time in 1982 under the name of “Jazz Summer”..."
+      },
+      "description": {
+        "eng": "The Südtirol Jazzfestival Alto Adige was held for the first time in 1982 under the name of “Jazz Summer”, which went on to become “Jazz & Other”. While in the early years the concerts were played only in Bolzano itself, today the festival stretches throughout the whole of South Tyrol and beyond."
+      },
+      "frequency": "annual",
+      "name": {
+        "eng": "Südtirol Jazz Festival",
+        "ita": "Südtirol Jazz Festival",
+        "deu": "Südtirol Jazz Festival"
+      },
+      "shortName": {
+        "eng": "Südtirol Jazz Festival"
+      },
+      "url": "https://www.suedtiroljazzfestival.com/"
+    },
+    "relationships": {
+      "categories": {
+        "data": [
+          {
+            "type": "categories",
+            "id": "example:festival"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2022-04/eventSeries/1/categories"
+        }
+      },
+      "multimediaDescriptions": {
+        "data": [
+          {
+            "type": "mediaObjects",
+            "id": "1"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2022-04/eventSeries/1/multimediaDescriptions"
+        }
+      },
+      "editions": {
+        "data": [
+          {
+            "type": "events",
+            "id": "1"
+          },
+          {
+            "type": "events",
+            "id": "2"
+          }
+        ],
+        "links": {
+          "related": "https://example.com/2022-04/eventSeries/1/editions"
+        }
+      }
+    },
+    "links": {
+      "self": "https://example.com/2022-04/eventSeries/1"
+    }
+  }
+}

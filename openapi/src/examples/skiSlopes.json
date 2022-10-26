@@ -1,0 +1,201 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "meta": {
+    "count": 10,
+    "pages": 10
+  },
+  "links": {
+      "next": "https://example.com/2022-04/skiSlopes?page[number]=2",
+      "prev": "https://example.com/2022-04/skiSlopes?page[number]=1",
+      "first": "https://example.com/2022-04/skiSlopes?page[number]=1",
+      "last": "https://example.com/2022-04/skiSlopes?page[number]=10",
+      "self": "https://example.com/2022-04/skiSlopes"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "skiSlopes",
+      "id": "1",
+      "meta": {
+        "dataProvider": "https://example.com",
+        "lastUpdate": "2020-04-01T08:00:00+02:00"
+      },
+      "attributes": {
+        "name": {
+          "ita": "Falzeben I",
+          "deu": "Falzeben I",
+          "eng": "Falzeben I"
+        },
+        "shortName": {
+          "ita": "Falzeben I"
+        },
+        "description": {
+          "ita": "Falzeben I -  Discesa tra i boschi facile, immersa in un panorama da sogno ed ideale per bambini e principianti. Altezza/Lunghezza: 1900 altezza, 3500 m."
+        },
+        "abstract": {
+          "ita": "Falzeben I -  Discesa tra i boschi facile, immersa in un panorama da sogno ed ideale per bambini e principianti."
+        },
+        "url": "https://example.com",
+        "length": 2000,
+        "minAltitude": 1500,
+        "maxAltitude": 2500,
+        "difficulty": {
+          "eu": "novice",
+          "us": "beginner"
+        },
+        "address": {
+          "street": null,
+          "city": {
+            "eng": "Merano"
+          },
+          "region": null,
+          "country": "IT",
+          "zipcode": null,
+          "categories": null,
+          "complement": null
+        },
+        "howToArrive": {
+          "ita": " Le fermate più vicine a Falzeben sono: Falzeben è a 41 metri di distanza a piedi e ci si arriva in 1 minuti di cammino; Villa Schäfer è a 808 metri di distanza a piedi e ci si arriva in 11 minuti di cammino."
+        },
+        "geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                11.305682659149168,
+                46.66705018437341
+              ],
+              [
+                11.30692720413208,
+                46.667182709603225
+              ],
+              [
+                11.308064460754393,
+                46.667491933875965
+              ]
+            ]
+          }
+        ],
+        "openingHours": {
+          "dailySchedules": {
+            "2020-12-25": null
+          },
+          "weeklySchedules": [
+            {
+              "validFrom": "2020-01-01",
+              "validTo": "2020-12-31",
+              "monday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "tuesday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "wednesday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "thursday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "friday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "saturday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ],
+              "sunday": [
+                {
+                  "opens": "08:00:00+01:00",
+                  "closes": "18:00:00+01:00"
+                }
+              ]
+            }
+          ]
+        },
+        "snowCondition": {
+          "primarySurface": "powder",
+          "secondarySurface": "packed-powder",
+          "baseSnow": 50,
+          "baseSnowRange": {
+            "lower": 40,
+            "upper": 60
+          },
+          "latestStorm": 40,
+          "obtainedIn": "2020-02-01",
+          "snowOverNight": 5,
+          "groomed": true,
+          "snowMaking": false
+        }
+      },
+      "relationships": {
+        "connections": {
+          "data": [
+            {
+              "type": "skiSlopes",
+              "id": "2"
+            },
+            {
+              "type": "skiSlopes",
+              "id": "3"
+            },
+            {
+              "type": "skiSlopes",
+              "id": "4"
+            },
+            {
+              "type": "lifts",
+              "id": "1"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2022-04/skiSlopes/1/connections/"
+          }
+        },
+        "categories": {
+          "data": [
+            {
+              "type": "categories",
+              "id": "alpinebits:standard-ski-slope"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2022-04/skiSlopes/1/categories"
+          }
+        },
+        "multimediaDescriptions": {
+          "data": [
+            {
+              "type": "mediaObjects",
+              "id": "2"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2022-04/skiSlopes/1/multimediaDescriptions/"
+          }
+        }
+      },
+      "links": {
+        "self": "https://example.com/2022-04/skiSlopes/1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2022-04/mountainAreas/1/subAreas"
+  },
+  "included": null,
+  "data": [
+    {
+      "id": "2",
+      "type": "mountainAreas",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "name": {
+          "eng": "Meran 2000"
+        },
+        "shortName": null,
+        "description": null,
+        "abstract": null,
+        "url": null,
+        "geometries": null,
+        "howToArrive": null,
+        "openingHours": null,
+        "area": null,
+        "minAltitude": null,
+        "maxAltitude": null,
+        "totalSlopeLength": null,
+        "totalParkArea": null,
+        "totalParkLength": null,
+        "snowCondition": null
+      },
+      "relationships": {
+        "areaOwner": null,
+        "connections": null,
+        "categories": null,
+        "multimediaDescriptions": null,
+        "lifts": null,
+        "skiSlopes": null,
+        "snowparks": null,
+        "subAreas": null
+      },
+      "links": {
+        "self": "https://example.com/2022-04/mountainAreas/2"
+      }
+    }
+  ]
+}

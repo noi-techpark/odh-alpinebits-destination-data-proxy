@@ -1,0 +1,161 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2022-04/events/1/contributors"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "agents",
+      "id": "1",
+      "meta": {
+        "dataProvider": "https://example.com",
+        "lastUpdate": "2020-04-01T08:00:00+02:00"
+      },
+      "attributes": {
+        "abstract": {
+          "ita": "La Libera Università di Bolzano sorge in una delle più attraenti regioni europee...",
+          "deu": "Die Freie Universität Bozen befindet sich in einer der attraktivsten Regionen Europas...",
+          "eng": "The Free University of Bozen-Bolzano is located in one of the most fascinating European regions..."
+        },
+        "contactPoints": [
+          {
+            "email": "info@noi.bz.it",
+            "telephone": "+39 0471 066 600",
+            "address": {
+              "street": {
+                "ita": "Piazza Università 1"
+              },
+              "city": {
+                "ita": "Bolzano"
+              },
+              "region": {
+                "ita": "Trentino-Alto Adige"
+              },
+              "country": "IT",
+              "zipcode": "39100",
+              "complement": {
+                "ita": "Ufficio 3.07"
+              },
+              "categories": [
+                "example:main"
+              ]
+            },
+            "availableHours": {
+              "dailySchedules": {
+                "2020-12-23": [
+                  {
+                    "opens": "08:00:00",
+                    "closes": "12:00:00"
+                  }
+                ],
+                "2020-12-25": null
+              },
+              "weeklySchedules": [
+                {
+                  "validFrom": "2020-01-01",
+                  "validTo": "2020-12-31",
+                  "monday": [
+                    {
+                      "opens": "08:00:00+01:00",
+                      "closes": "12:00:00+01:00"
+                    },
+                    {
+                      "opens": "14:00:00+01:00",
+                      "closes": "18:00:00+01:00"
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "opens": "08:00:00+01:00",
+                      "closes": "12:00:00+01:00"
+                    },
+                    {
+                      "opens": "14:00:00+01:00",
+                      "closes": "18:00:00+01:00"
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "opens": "08:00:00+01:00",
+                      "closes": "12:00:00+01:00"
+                    },
+                    {
+                      "opens": "14:00:00+01:00",
+                      "closes": "18:00:00+01:00"
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "opens": "08:00:00+01:00",
+                      "closes": "12:00:00+01:00"
+                    },
+                    {
+                      "opens": "14:00:00+01:00",
+                      "closes": "18:00:00+01:00"
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "opens": "08:00:00+01:00",
+                      "closes": "12:00:00+01:00"
+                    },
+                    {
+                      "opens": "14:00:00+01:00",
+                      "closes": "18:00:00+01:00"
+                    }
+                  ],
+                  "saturday": null,
+                  "sunday": null
+                }
+              ]
+            }
+          }
+        ],
+        "description": {
+          "ita": "La Libera Università di Bolzano sorge in una delle più attraenti regioni europee, al crocevia tra il mondo economico e culturale tedesco e italiano.",
+          "deu": "Die Freie Universität Bozen befindet sich in einer der attraktivsten Regionen Europas an der Schnittstelle zwischen dem deutschsprachigen und italienischen Kultur- und Wirtschaftsraum.",
+          "eng": "The Free University of Bozen-Bolzano is located in one of the most fascinating European regions, at the crossroads between the German-speaking and Italian economies and cultures."
+        },
+        "name": {
+          "ita": "Libera Univeristà di Bolzano",
+          "deu": "Freie Universität Bozen",
+          "eng": "Free University of Bozen-Bolzano"
+        },
+        "shortName": {
+          "eng": "Unibz"
+        },
+        "url": "https://www.unibz.it"
+      },
+      "relationships": {
+        "categories": {
+          "data": [
+            {
+              "type": "categories",
+              "id": "alpinebits:organization"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2022-04/agents/1/categories"
+          }
+        },
+        "multimediaDescriptions": {
+          "data": [
+            {
+              "type": "mediaObjects",
+              "id": "1"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2022-04/agents/1/multimediaDescriptions"
+          }
+        }
+      },
+      "links": {
+        "self": "https://example.com/2022-04/agents/1"
+      }
+    }
+  ]
+}

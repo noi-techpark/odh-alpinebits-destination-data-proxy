@@ -1,0 +1,301 @@
+base:
+  get:
+    description: Retrieves a collection of resources of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.json
+  post:
+    description: Creates a resources of type `events`.
+    tags:
+      - Events
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.id.json
+
+id:
+  get:
+    description: Retrieves a single resource type `events` with a matching
+      `{id}`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.id.json
+      '404':
+        description: 404 Not Found
+  patch:
+    description: Updates the `events` resource with a matching `{id}`.
+    tags:
+      - Events
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+            # example:
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.id.json
+    parameters:
+      - $ref: parameters/id.yml#/id
+  delete:
+    description: Deletes the `events` resource with a matching `{id}`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+    responses:
+      '204':
+        description: No Content
+
+categories:
+  get:
+    description: Retrieves the resources in the relationship `categories` of a
+      resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.categories.json
+      '404':
+        description: 404 Not Found
+contributors:
+  get:
+    description: Retrieves the resources in the relationship `contributors` of a
+      resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.contributors.json
+      '404':
+        description: 404 Not Found
+multimediaDescriptions:
+  get:
+    description: Retrieves the resources in the relationship
+      `multimediaDescriptions` of a resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.multimediaDescriptions.json
+      '404':
+        description: 404 Not Found
+organizers:
+  get:
+    description: Retrieves the resources in the relationship `organizers` of a
+      resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.organizers.json
+      '404':
+        description: 404 Not Found
+publisher:
+  get:
+    description: Retrieves the resources in the relationship `publisher` of a
+      resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.publisher.json
+      '404':
+        description: 404 Not Found
+series:
+  get:
+    description: Retrieves the resources in the relationship `series` of a
+      resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.series.json
+      '404':
+        description: 404 Not Found
+sponsors:
+  get:
+    description: Retrieves the resources in the relationship `sponsors` of a
+      resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.sponsors.json
+      '404':
+        description: 404 Not Found
+subEvents:
+  get:
+    description: Retrieves the resources in the relationship `subEvents` of a
+      resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.subEvents.json
+      '404':
+        description: 404 Not Found
+venues:
+  get:
+    description: Retrieves the resources in the relationship `venues` of a
+      resource of type `events`.
+    tags:
+      - Events
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/events.venues.json
+      '404':
+        description: 404 Not Found

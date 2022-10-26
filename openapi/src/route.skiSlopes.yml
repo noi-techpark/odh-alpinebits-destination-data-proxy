@@ -1,0 +1,161 @@
+base:
+  get:
+    description: Retrieves a collection of resources of type `skiSlopes`.
+    tags:
+      - Ski Slopes
+    parameters:
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/skiSlopes.json
+  post:
+    description: Creates a resources of type `skiSlopes`.
+    tags:
+      - Ski Slopes
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/skiSlopes.id.json
+            
+id:
+  get:
+    description: Retrieves a single resource type `skiSlopes` with a matching
+      `{id}`.
+    tags:
+      - Ski Slopes
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/skiSlopes.id.json
+      '404':
+        description: 404 Not Found
+  patch:
+    description: Updates the `skiSlopes` resource with a matching `{id}`.
+    tags:
+      - Ski Slopes
+    requestBody:
+      content:
+        'application/vnd.api+json':
+          schema:
+            type: 'object'
+            # example:
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/skiSlopes.id.json
+    parameters:
+      - $ref: parameters/id.yml#/id
+  delete:
+    description: Deletes the `skiSlopes` resource with a matching `{id}`.
+    tags:
+      - Ski Slopes
+    parameters:
+      - $ref: parameters/id.yml#/id
+    responses:
+      '204':
+        description: No Content
+
+categories:
+  get:
+    description: Retrieves the resources in the relationship `categories` of a
+      resource of type `skiSlopes`.
+    tags:
+      - Ski Slopes
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/skiSlopes.categories.json
+      '404':
+        description: 404 Not Found
+connections:
+  get:
+    description: Retrieves the resources in the relationship `connections` of a
+      resource of type `skiSlopes`.
+    tags:
+      - Ski Slopes
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/skiSlopes.connections.json
+      '404':
+        description: 404 Not Found
+multimediaDescriptions:
+  get:
+    description: Retrieves the resources in the relationship
+      `multimediaDescriptions` of a resource of type `skiSlopes`.
+    tags:
+      - Ski Slopes
+    parameters:
+      - $ref: parameters/id.yml#/id
+      - $ref: parameters/include.yml#/include
+      - $ref: parameters/fields.yml#/fields
+      - $ref: parameters/page.yml#/pagesize
+      - $ref: parameters/page.yml#/pagenumber
+      - $ref: parameters/filter.yml#/filter
+      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/sort.yml#/sort
+      # - $ref: parameters/random.yml#/random
+    responses:
+      '200':
+        description: OK
+        content:
+            application/vnd.api+json:
+              example:
+                $ref: examples/skiSlopes.multimediaDescriptions.json
+      '404':
+        description: 404 Not Found

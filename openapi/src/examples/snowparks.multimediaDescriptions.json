@@ -1,0 +1,39 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2022-04/snowparks/1/multimediaDescriptions"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "mediaObjects",
+      "id": "1",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "abstract": null,
+        "author": null,
+        "contentType": "audio/mpeg3",
+        "description": null,
+        "duration": null,
+        "height": null,
+        "license": null,
+        "name": null,
+        "shortName": null,
+        "url": "https://example.com/audio.mp3",
+        "width": null
+      },
+      "relationships": {
+        "categories": null,
+        "licenseHolder": null
+      },
+      "links": {
+        "self": "https://example.com/2022-04/mediaObjects/1"
+      }
+    }
+  ]
+}

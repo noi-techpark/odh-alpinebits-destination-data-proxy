@@ -1,0 +1,78 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+      "self": "https://example.com/2022-04/events/1/subEvents"
+  },
+  "included": null,
+  "data": [
+    {
+      "type": "events",
+      "id": "2",
+      "meta": {
+        "dataProvider": null,
+        "lastUpdate": null
+      },
+      "attributes": {
+        "name": {
+          "eng": "Südtirol Jazz Festival 2018"
+        },
+        "shortName": null,
+        "description": null,
+        "abstract": null,
+        "startDate": "2018-06-29T00:00:00+00:00",
+        "endDate": null,
+        "url": null,
+        "status": null,
+        "inPersonCapacity": null,
+        "onlineCapacity": null,
+        "participationUrl": null,
+        "recorded": null,
+        "registrationUrl": null
+      },
+      "relationships": {
+        "series": null,
+        "publisher": {
+          "data": {
+            "type": "agents",
+            "id": "1"
+          },
+          "links": {
+            "related": "https://example.com/2022-04/events/2/publisher"
+          }
+        },
+        "organizers": {
+          "data": [
+            {
+              "type": "agents",
+              "id": "2"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2022-04/events/2/organizers"
+          }
+        },
+        "sponsors": null,
+        "contributors": null,
+        "categories": null,
+        "multimediaDescriptions": null,
+        "venues": {
+          "data": [
+            {
+              "type": "venues",
+              "id": "1"
+            }
+          ],
+          "links": {
+            "related": "https://example.com/2022-04/events/2/venues"
+          }
+        },
+        "subEvents": null
+      },
+      "links": {
+        "self": "https://example.com/2022-04/events/2"
+      }
+    }
+  ]
+}
