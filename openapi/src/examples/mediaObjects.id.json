@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/mediaObjects/1"
+      "self": "https://example.com/2022-04/mediaObjects/1"
   },
   "included": null,
   "data": {
@@ -44,21 +44,21 @@
           }
         ],
         "links": {
-          "related": "https://example.com/2021-04/mediaObjects/1/categories"
+          "related": "https://example.com/2022-04/mediaObjects/1/categories"
         }
       },
-      "copyrightOwner": {
+      "licenseHolder": {
         "data": {
           "type": "agents",
           "id": "0"
         },
         "links": {
-          "related": "https://example.com/2021-04/mediaObjects/1/copyrgihtOwner/"
+          "related": "https://example.com/2022-04/mediaObjects/1/copyrgihtOwner/"
         }
       }
     },
     "links": {
-      "self": "https://example.com/2021-04/mediaObjects/1"
+      "self": "https://example.com/2022-04/mediaObjects/1"
     }
   }
 }

@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/lifts/1/connections"
+      "self": "https://example.com/2022-04/lifts/1/connections"
   },
   "included": null,
   "data": [
@@ -128,7 +128,7 @@
         "area": 36000,
         "minAltitude": 1200,
         "maxAltitude": 2000,
-        "totalTrailLength": 4000,
+        "totalSlopeLength": 4000,
         "totalParkArea": 20000,
         "totalParkLength": 1000,
         "snowCondition": {
@@ -153,7 +153,7 @@
             "id": "1"
           },
           "links": {
-            "related": "https://example.com/2021-04/mountainAreas/1/areaOwner/"
+            "related": "https://example.com/2022-04/mountainAreas/1/areaOwner/"
           }
         },
         "connections": {
@@ -168,7 +168,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/mountainAreas/1/connections/"
+            "related": "https://example.com/2022-04/mountainAreas/1/connections/"
           }
         },
         "categories": {
@@ -179,7 +179,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/mountainAreas/1/categories"
+            "related": "https://example.com/2022-04/mountainAreas/1/categories"
           }
         },
         "multimediaDescriptions": {
@@ -190,7 +190,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/mountainAreas/1/multimediaDescriptions/"
+            "related": "https://example.com/2022-04/mountainAreas/1/multimediaDescriptions/"
           }
         },
         "lifts": {
@@ -201,7 +201,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/mountainAreas/1/lifts/"
+            "related": "https://example.com/2022-04/mountainAreas/1/lifts/"
           }
         },
         "skiSlopes": {
@@ -212,7 +212,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/mountainAreas/1/skiSlopes/"
+            "related": "https://example.com/2022-04/mountainAreas/1/skiSlopes/"
           }
         },
         "snowparks": {
@@ -223,7 +223,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/mountainAreas/1/snowparks/"
+            "related": "https://example.com/2022-04/mountainAreas/1/snowparks/"
           }
         },
         "subAreas": {
@@ -238,12 +238,12 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/mountainAreas/1/subAreas/"
+            "related": "https://example.com/2022-04/mountainAreas/1/subAreas/"
           }
         }
       },
       "links": {
-        "self": "https://example.com/2021-04/mountainAreas/1"
+        "self": "https://example.com/2022-04/mountainAreas/1"
       }
     }
   ]

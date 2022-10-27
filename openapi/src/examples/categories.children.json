@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/categories/example:category/children"
+      "self": "https://example.com/2022-04/categories/example:category/children"
   },
   "included": null,
   "data": [
@@ -31,9 +31,9 @@
         "parents": null
       },
       "links": {
-        "self": "https://example.com/2021-04/categories/example:subcategory",
+        "self": "https://example.com/2022-04/categories/example:subcategory",
         "resources": {
-          "events": "https://example.com/2021-04/events?filter[categories][any]=example:subcategory"
+          "events": "https://example.com/2022-04/events?filter[categories][any]=example:subcategory"
         }
       }
     }

@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/agents/1/categories"
+      "self": "https://example.com/2022-04/agents/1/categories"
   },
   "included": null,
   "data": [
@@ -31,9 +31,9 @@
         "parents": null
       },
       "links": {
-        "self": "https://example.com/2021-04/categories/alpinebits:organization",
+        "self": "https://example.com/2022-04/categories/alpinebits:organization",
         "resources": {
-          "agents": "https://example.com/2021-04/agents?filter[categories][any]=alpinebits:organization"
+          "agents": "https://example.com/2022-04/agents?filter[categories][any]=alpinebits:organization"
         }
       }
     }

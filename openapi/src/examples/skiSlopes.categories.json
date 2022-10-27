@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/skiSlopes/1/categories"
+      "self": "https://example.com/2022-04/skiSlopes/1/categories"
   },
   "included": null,
   "data": [
@@ -31,9 +31,9 @@
         "parents": null
       },
       "links": {
-        "self": "https://example.com/2021-04/categories/example:category",
+        "self": "https://example.com/2022-04/categories/example:category",
         "resources": {
-          "skiSlopes": "https://example.com/2021-04/skiSlopes?filter[categories][any]=example:category"
+          "skiSlopes": "https://example.com/2022-04/skiSlopes?filter[categories][any]=example:category"
         }
       }
     }

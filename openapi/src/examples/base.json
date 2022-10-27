@@ -2,7 +2,8 @@
   "links": {
     "self": "https://destinationdata.alpinebits.opendatahub.bz.it/",
     "1.0": "https://destinationdata.alpinebits.opendatahub.bz.it/1.0/",
-    "2021-04": "https://destinationdata.alpinebits.opendatahub.bz.it/2021-04/"
+    "2021-04": "https://destinationdata.alpinebits.opendatahub.bz.it/2021-04/",
+    "2022-04": "https://destinationdata.alpinebits.opendatahub.bz.it/2022-04/"
   },
   "data": null
 }

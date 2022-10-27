@@ -3,7 +3,7 @@
     "version": "1.0"
   },
   "links": {
-      "self": "https://example.com/2021-04/mountainAreas/1/skiSlopes"
+      "self": "https://example.com/2022-04/mountainAreas/1/skiSlopes"
   },
   "included": null,
   "data": [
@@ -159,7 +159,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/skiSlopes/1/connections/"
+            "related": "https://example.com/2022-04/skiSlopes/1/connections/"
           }
         },
         "categories": {
@@ -170,7 +170,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/skiSlopes/1/categories"
+            "related": "https://example.com/2022-04/skiSlopes/1/categories"
           }
         },
         "multimediaDescriptions": {
@@ -181,12 +181,12 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/skiSlopes/1/multimediaDescriptions/"
+            "related": "https://example.com/2022-04/skiSlopes/1/multimediaDescriptions/"
           }
         }
       },
       "links": {
-        "self": "https://example.com/2021-04/skiSlopes/1"
+        "self": "https://example.com/2022-04/skiSlopes/1"
       }
     }
   ]

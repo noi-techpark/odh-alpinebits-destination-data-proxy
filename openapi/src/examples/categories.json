@@ -7,11 +7,11 @@
     "pages": 10
   },
   "links": {
-      "next": "https://example.com/2021-04/categories?page[number]=2",
-      "prev": "https://example.com/2021-04/categories?page[number]=1",
-      "first": "https://example.com/2021-04/categories?page[number]=1",
-      "last": "https://example.com/2021-04/categories?page[number]=10",
-      "self": "https://example.com/2021-04/categories"
+      "next": "https://example.com/2022-04/categories?page[number]=2",
+      "prev": "https://example.com/2022-04/categories?page[number]=1",
+      "first": "https://example.com/2022-04/categories?page[number]=1",
+      "last": "https://example.com/2022-04/categories?page[number]=10",
+      "self": "https://example.com/2022-04/categories"
   },
   "included": null,
   "data": [
@@ -20,7 +20,7 @@
       "id": "example:soccerEvent",
       "meta": {
         "dataProvider": "https://example.com",
-        "lastUpdate": "2021-04-01T08:00:00+02:00"
+        "lastUpdate": "2022-04-01T08:00:00+02:00"
       },
       "attributes": {
         "abstract": {
@@ -54,7 +54,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/categories/example:soccerEvent/children"
+            "related": "https://example.com/2022-04/categories/example:soccerEvent/children"
           }
         },
         "multimediaDescriptions": {
@@ -65,7 +65,7 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/categories/example:soccerEvent/multimediaDescriptions"
+            "related": "https://example.com/2022-04/categories/example:soccerEvent/multimediaDescriptions"
           }
         },
         "parents": {
@@ -76,14 +76,14 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/categories/example:soccerEvent/parents"
+            "related": "https://example.com/2022-04/categories/example:soccerEvent/parents"
           }
         }
       },
       "links": {
-        "self": "https://example.com/2021-04/categories/example:soccerEvent",
+        "self": "https://example.com/2022-04/categories/example:soccerEvent",
         "resources": {
-          "events": "https://example.com/2021-04/events?filter[categories][any]=example:soccerEvent"
+          "events": "https://example.com/2022-04/events?filter[categories][any]=example:soccerEvent"
         }
       }
     }

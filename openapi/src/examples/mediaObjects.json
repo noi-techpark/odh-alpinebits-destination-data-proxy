@@ -7,11 +7,11 @@
     "pages": 10
   },
   "links": {
-      "next": "https://example.com/2021-04/mediaObjects?page[number]=2",
-      "prev": "https://example.com/2021-04/mediaObjects?page[number]=1",
-      "first": "https://example.com/2021-04/mediaObjects?page[number]=1",
-      "last": "https://example.com/2021-04/mediaObjects?page[number]=10",
-      "self": "https://example.com/2021-04/mediaObjects"
+      "next": "https://example.com/2022-04/mediaObjects?page[number]=2",
+      "prev": "https://example.com/2022-04/mediaObjects?page[number]=1",
+      "first": "https://example.com/2022-04/mediaObjects?page[number]=1",
+      "last": "https://example.com/2022-04/mediaObjects?page[number]=10",
+      "self": "https://example.com/2022-04/mediaObjects"
   },
   "included": null,
   "data": [
@@ -53,21 +53,21 @@
             }
           ],
           "links": {
-            "related": "https://example.com/2021-04/mediaObjects/1/categories"
+            "related": "https://example.com/2022-04/mediaObjects/1/categories"
           }
         },
-        "copyrightOwner": {
+        "licenseHolder": {
           "data": {
             "type": "agents",
             "id": "0"
           },
           "links": {
-            "related": "https://example.com/2021-04/mediaObjects/1/copyrgihtOwner/"
+            "related": "https://example.com/2022-04/mediaObjects/1/copyrgihtOwner/"
           }
         }
       },
       "links": {
-        "self": "https://example.com/2021-04/mediaObjects/1"
+        "self": "https://example.com/2022-04/mediaObjects/1"
       }
     }
   ]
