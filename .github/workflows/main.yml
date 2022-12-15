@@ -93,14 +93,22 @@ jobs:
       - name: Create .env file
         uses: noi-techpark/github-actions/env-file@v2
         env:
-          X_DOCKER_PROJECT_NAME: ${{ env.PROJECT_NAME }}
+          X_COMPOSE_PROJECT_NAME: ${{ env.PROJECT_NAME }}
           X_DOCKER_IMAGE: ${{ env.DOCKER_IMAGE }}
           X_DOCKER_TAG: ${{ env.DOCKER_TAG }}
           X_SERVER_PORT: ${{ env.SERVER_PORT }}
           X_URL_BASE: "https://destinationdata.alpinebits.opendatahub.bz.it"
           X_URL_SWAGGER: "https://swagger.opendatahub.bz.it/?url=https://destinationdata.alpinebits.opendatahub.bz.it/specification.json"
-          X_URL_VERSION_1_0: "http://tourism.docker.opendatahub.bz.it:1003"
-          X_URL_VERSION_2021_04: "http://tourism.docker.opendatahub.bz.it:1006"
+          X_URL_VERSION_1_0: "http://docker04.opendatahub.bz.it:1003"
+          X_URL_VERSION_2021_04: "http://docker04.opendatahub.bz.it:1006"
+          X_URL_VERSION_2022_04: "http://docker04.opendatahub.bz.it:1018"
+
+      - name: create openapi specification 
+        uses: noi-techpark/github-actions/npm-build@v2
+        with:
+          working-directory: './openapi/'
+          node-version: '14'
+          build-command: 'npm run bundle'
 
       - name: Build and push 
         uses: noi-techpark/github-actions/docker-build-and-push@v2
