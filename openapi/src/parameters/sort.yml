@@ -7,13 +7,7 @@ sort:
     selected field. Sorting requests may be in ascending (e.g.,
     `sort=startDate`) or descending order (e.g., `sort=-length`) by prefixing
     the field name with a MINUS (U+002D) character. Sorting is available over
-    the primitive type attributes of an endpoint's resources.
-    # Sorted requests may also
-    # take multiple fields as input as well as nested fields (e).g.,
-    # `sort=-startDate,name.eng`).  If a request includes both `random` and `sort`
-    # requests, the server shall respond with `400 Bad Request`. If a server is
-    # unable to use any selected fields to sort resources, it shall respond with
-    # `400 Bad Request`.
+    `"lastUpdate"` the primitive attributes of an endpoint's resources.
   schema:
     type: string
     minLength: 1

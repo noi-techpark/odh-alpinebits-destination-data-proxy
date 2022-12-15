@@ -9,9 +9,9 @@ base:
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
       - $ref: parameters/filter.yml#/filter
-      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/search.yml#/search
       - $ref: parameters/sort.yml#/sort
-      # - $ref: parameters/random.yml#/random
+      - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -97,9 +97,9 @@ categories:
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
       - $ref: parameters/filter.yml#/filter
-      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/search.yml#/search
       - $ref: parameters/sort.yml#/sort
-      # - $ref: parameters/random.yml#/random
+      - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -122,9 +122,9 @@ connections:
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
       - $ref: parameters/filter.yml#/filter
-      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/search.yml#/search
       - $ref: parameters/sort.yml#/sort
-      # - $ref: parameters/random.yml#/random
+      - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -147,9 +147,9 @@ features:
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
       - $ref: parameters/filter.yml#/filter
-      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/search.yml#/search
       - $ref: parameters/sort.yml#/sort
-      # - $ref: parameters/random.yml#/random
+      - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK
@@ -172,9 +172,9 @@ multimediaDescriptions:
       - $ref: parameters/page.yml#/pagesize
       - $ref: parameters/page.yml#/pagenumber
       - $ref: parameters/filter.yml#/filter
-      # - $ref: parameters/search.yml#/search
+      - $ref: parameters/search.yml#/search
       - $ref: parameters/sort.yml#/sort
-      # - $ref: parameters/random.yml#/random
+      - $ref: parameters/random.yml#/random
     responses:
       '200':
         description: OK

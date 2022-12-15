@@ -6,7 +6,7 @@ filter:
   allowReserved: true
   description: >
     Filters resources in the endpoint given a field of the of the resource,
-    an operation, and the desired value using the following syntax
+    an operand, and the desired value using the following syntax
     `filter["field"]["operand"]="value"`. The following operands are available:
       - `exists`: filters resources based on whether they have the desired
         field (e.g., `filter[description][exists]=true`). A `"field"` can be
@@ -24,24 +24,45 @@ filter:
         value matching the field's type.
 
       - `gt`: filters resources that have the selected field greater than the
-        desired value (e.g., `filter[lastUpdate][gt]=2022-04-01`). A `"field"` can
-        be `"lastUpdate"` any primitive type attribute. A `"value"` must be primitive JSON
-        value matching the field's type.
+        desired value (e.g., `filter[lastUpdate][gt]=2022-04-01`). A `"field"`
+        can be `"lastUpdate"` any primitive type attribute. A `"value"` must be
+        primitive JSON value matching the field's type.
 
-      - `gte`: filters resources that have the selected field  greater than or equal to the
-        desired value (e.g., `filter[lastUpdate][gte]=2022-04-01`). A `"field"` can
-        be `"lastUpdate"` any primitive type attribute. A `"value"` must be primitive JSON
-        value matching the field's type.
+      - `gte`: filters resources that have the selected field  greater than or
+        equal to the desired value (e.g.,
+        `filter[lastUpdate][gte]=2022-04-01`). A `"field"` can be
+        `"lastUpdate"` any primitive type attribute. A `"value"` must be
+        primitive JSON value matching the field's type.
 
       - `lt`: filters resources that have the selected field lower than the
-        desired value (e.g., `filter[lastUpdate][lt]=2022-04-01`). A `"field"` can
-        be `"lastUpdate"` any primitive type attribute. A `"value"` must be primitive JSON
-        value matching the field's type.
+        desired value (e.g., `filter[lastUpdate][lt]=2022-04-01`). A `"field"`
+        can be `"lastUpdate"` any primitive type attribute. A `"value"` must be
+        primitive JSON value matching the field's type.
 
-      - `lte`: filters resources that have the selected field  lower than or equal to the
-        desired value (e.g., `filter[lastUpdate][lte]=2022-04-01`). A `"field"` can
-        be `"lastUpdate"` any primitive type attribute. A `"value"` must be primitive JSON
-        value matching the field's type.
+      - `lte`: filters resources that have the selected field  lower than or
+        equal to the desired value (e.g.,
+        `filter[lastUpdate][lte]=2022-04-01`). A `"field"` can be
+        `"lastUpdate"` any primitive type attribute. A `"value"` must be
+        primitive JSON value matching the field's type.
+      
+      - `any`: filters resources that have any of the passed values assigned to
+        the desired field (e.g.,
+        `filter[categories][any]=alpinebits:person,alpinebits:organization`).
+        **This filter can only be used with the `categories` field**.
+      
+      - `near`: filters resources that are located within a given distance of a
+        longitude-latitude point (e.g.,
+        `filter[geometries][near]=11.35,46.49,1000`). This filter must receive
+        a triple of longitude, latitude, and distance in meters, and it can
+        only be using for the fields `"geometries"`, for geo-located resources,
+        and `"venues"` for event resources.
+      
+      - `within`: filters resources that are located within a given GeoJSON
+      geometry (e.g.,
+      `filter[geometries][within]=filter[venues][within]={"coordinates":[[[11.31,46.55],[11.31,46.47],[11.42,46.47],[11.42,46.55],[11.31,46.55]]],"type":"Polygon"}`).
+      This filter must receive a GeoJSON Polygon describing the desired area,
+      and it can only be using for the fields `"geometries"`, for geo-located
+      resources, and `"venues"` for event resources.
 
     Additionally, two special filters are available on ski slope collection.
     These can also be filtered based on their specific difficulties by using

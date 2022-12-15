@@ -1,12 +1,12 @@
 search:
-  name: search[name]
+  name: search
   in: query
   style: form
   explode: true
   allowReserved: true
   description: >
-    Searches resources containing a desired substring in their names, regardless
+    Searches resources containing a desired substring in their names or descriptions, regardless
     of language or case (e.g., `search[name]=bozen`).
   schema:
     type: string
-    minimum: 1
+    minLength: 1
