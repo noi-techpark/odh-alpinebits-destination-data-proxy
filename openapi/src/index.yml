@@ -21,7 +21,7 @@ info:
 servers:
   - description: OpenDataHub Server (Test Machine)
     url: https://destinationdata.alpinebits.opendatahub.testingmachine.eu/
-  - url: https://destinationdata.alpinebits.opendatahub.bz.it/
+  - url: https://destinationdata.alpinebits.opendatahub.com/
     description: OpenDataHub Server
   - url: https://example.com/
     description: Example Server URL
