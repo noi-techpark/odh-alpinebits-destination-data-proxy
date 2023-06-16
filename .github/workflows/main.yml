@@ -57,7 +57,7 @@ jobs:
           X_DOCKER_TAG: ${{ env.DOCKER_TAG }}
           X_SERVER_PORT: ${{ env.SERVER_PORT }}
           X_URL_BASE: "https://destinationdata.alpinebits.opendatahub.testingmachine.eu"
-          X_URL_SWAGGER: "https://swagger.opendatahub.bz.it/?url=https://destinationdata.alpinebits.opendatahub.testingmachine.eu/specification.json"
+          X_URL_SWAGGER: "https://swagger.opendatahub.com/?url=https://destinationdata.alpinebits.opendatahub.testingmachine.eu/specification.json"
           X_URL_VERSION_1_0: "http://docker02.testingmachine.eu:1003"
           X_URL_VERSION_2021_04: "http://docker02.testingmachine.eu:1006"
           X_URL_VERSION_2022_04: "http://docker02.testingmachine.eu:1018"
@@ -100,11 +100,11 @@ jobs:
           X_DOCKER_IMAGE: ${{ env.DOCKER_IMAGE }}
           X_DOCKER_TAG: ${{ env.DOCKER_TAG }}
           X_SERVER_PORT: ${{ env.SERVER_PORT }}
-          X_URL_BASE: "https://destinationdata.alpinebits.opendatahub.bz.it"
-          X_URL_SWAGGER: "https://swagger.opendatahub.bz.it/?url=https://destinationdata.alpinebits.opendatahub.bz.it/specification.json"
-          X_URL_VERSION_1_0: "http://docker04.opendatahub.bz.it:1003"
-          X_URL_VERSION_2021_04: "http://docker04.opendatahub.bz.it:1006"
-          X_URL_VERSION_2022_04: "http://docker04.opendatahub.bz.it:1018"
+          X_URL_BASE: "https://destinationdata.alpinebits.opendatahub.com"
+          X_URL_SWAGGER: "https://swagger.opendatahub.com/?url=https://destinationdata.alpinebits.opendatahub.com/specification.json"
+          X_URL_VERSION_1_0: "http://docker04.opendatahub.com:1003"
+          X_URL_VERSION_2021_04: "http://docker04.opendatahub.com:1006"
+          X_URL_VERSION_2022_04: "http://docker04.opendatahub.com:1018"
 
       - name: create openapi specification 
         uses: noi-techpark/github-actions/npm-build@v2
