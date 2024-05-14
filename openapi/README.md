@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
+
+SPDX-License-Identifier: CC0-1.0
+-->
+
 # AlpineBits DestinationData OpenAPI Specification
 
 This project contains an OpenAPI specification based on the [AlpineBits DestinationData](https://www.alpinebits.org/destinationdata/) standard.

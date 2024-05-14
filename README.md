@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
+
+SPDX-License-Identifier: CC0-1.0
+-->
+
 # AlpineBits DestinationData Proxy
 
 This is a reference implementation for an AlpineBits DestinationData server. The server exposes data from the OpenDataHub API in accordance to the AlpineBits format.
@@ -6,6 +12,7 @@ However, the main purpose of this application is to operate as proxy to forward 
 
 Additionally, this project also hosts the OpenAPI specification of the reference implementation. For detailed instructions regarding the OpenAPI specification, click [here](./openapi).
 
+[![REUSE Compliance](https://github.com/noi-techpark/odh-alpinebits-destination-data-proxy/actions/workflows/reuse.yml/badge.svg)](https://github.com/noi-techpark/odh-docs/wiki/REUSE#badges)
 [![CI/CD](https://github.com/noi-techpark/odh-alpinebits-destination-data-proxy/actions/workflows/main.yml/badge.svg)](https://github.com/noi-techpark/odh-alpinebits-destination-data-proxy/actions/workflows/main.yml)
 
 ## Table of contents
@@ -68,7 +75,7 @@ Find [here](https://opendatahub.readthedocs.io/en/latest/guidelines.html) guidel
 
 ### Support
 
-For support, please contact [info@opendatahub.bz.it](mailto:info@opendatahub.bz.it).
+For support, please contact [info@opendatahub.com](mailto:info@opendatahub.com).
 
 ### Contributing
 
@@ -91,3 +98,18 @@ More documentation can be found at [https://opendatahub.readthedocs.io/en/latest
 ### License
 
 The code in this project is licensed under the GNU AFFERO GENERAL PUBLIC LICENSE Version 3 license. See the [LICENSE.md](LICENSE.md) file for more information.
+
+### REUSE
+
+This project is [REUSE](https://reuse.software) compliant, more information about the usage of REUSE in NOI Techpark repositories can be found [here](https://github.com/noi-techpark/odh-docs/wiki/Guidelines-for-developers-and-licenses#guidelines-for-contributors-and-new-developers).
+
+Since the CI for this project checks for REUSE compliance you might find it useful to use a pre-commit hook checking for REUSE compliance locally. The [pre-commit-config](.pre-commit-config.yaml) file in the repository root is already configured to check for REUSE compliance with help of the [pre-commit](https://pre-commit.com) tool.
+
+Install the tool by running:
+```bash
+pip install pre-commit
+```
+Then install the pre-commit hook via the config file by running:
+```bash
+pre-commit install
+```
